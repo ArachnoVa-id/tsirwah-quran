@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-lines */
 /* eslint-disable react-func/max-lines-per-function */
 /* eslint-disable no-param-reassign */
@@ -169,6 +170,6 @@ const config = {
 
 // eslint-disable-next-line max-lines
 module.exports = withPlugins(
-  [withTM, withBundleAnalyzer, withPWA, withFonts, nextTranslate, withSentryConfig],
+  [withTM, withBundleAnalyzer, withPWA, withFonts, nextTranslate],
   config,
 );
