@@ -1,0 +1,74 @@
+@use "src/styles/breakpoints";
+@use "src/styles/theme";
+
+// $background-color: #68B5A6; // Extracted teal/soft green background color
+$font-color: #ffffff; // Assuming the font color for the text is white
+$arabic-font: "Amiri", serif; // Example font family for Arabic text
+$translation-font: "Inter", sans-serif; // Example font family for translation
+
+.quoteContainer {
+//   background-color: $background-color;
+  padding: var(--spacing-medium);
+  text-align: center;
+  border-radius: var(--radius-medium); // Assuming there is a slight rounding at the corners
+  margin-bottom: 2%;
+
+  .arabicText {
+    font-family: $arabic-font;
+    font-size: 2rem; // Adjust based on actual size
+    color: $font-color;
+    margin-bottom: var(--spacing-small);
+  }
+
+  .translationText {
+    font-family: $translation-font;
+    font-size: 1.4rem; // Adjust based on actual size
+    color: $font-color;
+    margin-bottom: var(--spacing-small);
+  }
+
+  .reference {
+    font-family: $translation-font;
+    font-size: 1rem;
+    font-style: italic;
+    color: $font-color;
+    margin-top: var(--spacing-small);
+    opacity: 0.8; // Slight transparency for the reference
+  }
+}
+
+.header {
+  margin-block-end: var(--spacing-xsmall);
+  padding-inline-start: var(--flow-side-spacing, var(--spacing-small));
+}
+
+.quickLinksContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+  margin-inline: auto;
+  margin-bottom: 2%;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 0;
+  }
+}
+
+.title {
+  margin-block-end: var(--spacing-small);
+}
+
+.subtitle {
+  margin-block-end: var(--spacing-medium);
+}
+
+.link {
+  margin-inline: var(--spacing-xxsmall);
+  margin-block-end: var(--spacing-xxsmall);
+  &:hover {
+    box-shadow: var(--shadow-large);
+    color: var(--color-text-inverse);
+  }
+}

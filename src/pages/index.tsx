@@ -10,8 +10,8 @@ import styles from './index.module.scss';
 
 import ChapterAndJuzListWrapper from '@/components/chapters/ChapterAndJuzList';
 import HomePageHero from '@/components/HomePage/HomePageHero';
-import QuranGrowthJourneySection from '@/components/HomePage/QuranGrowthJourneySection';
-import RamadanActivitiesSection from '@/components/HomePage/RamadanActivitiesSection';
+// import QuranGrowthJourneySection from '@/components/HomePage/QuranGrowthJourneySection';
+// import RamadanActivitiesSection from '@/components/HomePage/RamadanActivitiesSection';
 import NextSeoWrapper from '@/components/NextSeoWrapper';
 import BookmarksAndCollectionsSection from '@/components/Verses/BookmarksAndCollectionsSection';
 import { getAllChaptersData } from '@/utils/chapter';
@@ -40,12 +40,12 @@ const Index: NextPage<IndexProps> = ({ chaptersResponse: { chapters } }): JSX.El
       <div className={styles.pageContainer}>
         <div className={styles.flow}>
           <HomePageHero />
-          <div className={classNames(styles.flowItem, styles.fullWidth)}>
+          {/* <div className={classNames(styles.flowItem, styles.fullWidth)}>
             <RamadanActivitiesSection />
-          </div>
-          <div className={classNames(styles.flowItem, styles.fullWidth)}>
+          </div> */}
+          {/* <div className={classNames(styles.flowItem, styles.fullWidth)}>
             <QuranGrowthJourneySection />
-          </div>
+          </div> */}
           <div className={classNames(styles.flowItem, styles.fullWidth)}>
             <BookmarksAndCollectionsSection isHomepage />
           </div>

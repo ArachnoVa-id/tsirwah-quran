@@ -33,6 +33,11 @@ import DataContext from 'src/contexts/DataContext';
 import ThemeProvider from 'src/styles/ThemeProvider';
 import { AudioPlayerMachineProvider } from 'src/xstate/AudioPlayerMachineContext';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fontsource/amiri/400.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fontsource/amiri/700.css';
+
 import 'src/styles/reset.scss';
 import 'src/styles/fonts.scss';
 import 'src/styles/theme.scss';

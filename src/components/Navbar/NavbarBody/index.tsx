@@ -3,14 +3,14 @@ import { memo } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useDispatch } from 'react-redux';
 
-import LanguageSelector from '../LanguageSelector';
+// import LanguageSelector from '../LanguageSelector';
 import NavbarLogoWrapper from '../Logo/NavbarLogoWrapper';
 import NavigationDrawer from '../NavigationDrawer/NavigationDrawer';
 import SearchDrawer from '../SearchDrawer/SearchDrawer';
 import SettingsDrawer from '../SettingsDrawer/SettingsDrawer';
 
 import styles from './NavbarBody.module.scss';
-import ProfileAvatarButton from './ProfileAvatarButton';
+// import ProfileAvatarButton from './ProfileAvatarButton';
 
 import Button, { ButtonShape, ButtonVariant } from '@/dls/Button/Button';
 import IconMenu from '@/icons/menu.svg';
@@ -73,8 +73,8 @@ const NavbarBody: React.FC = () => {
       <div className={styles.centerVertically}>
         <div className={styles.rightCTA}>
           <>
-            <ProfileAvatarButton />
-            <LanguageSelector />
+            {/* <ProfileAvatarButton /> */}
+            {/* <LanguageSelector /> */}
             <Button
               tooltip={t('settings.title')}
               shape={ButtonShape.Circle}

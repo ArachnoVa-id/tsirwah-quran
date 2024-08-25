@@ -2681,6 +2681,11 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.1.tgz#16308cea045f0fc777b6ff20a9f25474dd8293d2"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
+"@fontsource/amiri@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/amiri/-/amiri-5.0.14.tgz#76b80f205c535a45abe774befc749cc104b84e9e"
+  integrity sha512-G1bWjQp8Uyoe3ls3+hZ3qkhV+FfdJTnckSarPtxVwu52dG9LcrR16DCEpWdI0q62v4ARxNxjNh6/iaavfY433Q==
+
 "@gilbarbara/deep-equal@^0.1.1":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@gilbarbara/deep-equal/-/deep-equal-0.1.2.tgz#1a106721368dba5e7e9fb7e9a3a6f9efbd8df36d"

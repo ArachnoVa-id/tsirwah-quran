@@ -2,7 +2,7 @@ import { create } from "@storybook/theming";
 
 export default create({
   base: "dark",
-  brandTitle: "Quran.com",
+  brandTitle: "Tsirwah Quran",
   brandUrl: "https://quran.com",
   brandImage: "https://quran.com/favicon.ico",
   brandTarget: "_self",

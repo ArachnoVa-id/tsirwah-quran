@@ -7,12 +7,12 @@ import { getDefaultOgImageUrl } from '@/lib/og';
 import { VersesResponse } from 'types/ApiResponses';
 
 export const config = {
-  siteName: 'Quran.com',
+  siteName: 'Tsirwah Quran',
   twitterHandle: '@app_quran',
   twitterCardType: 'summary_large_image',
   facebookApp: '342185219529773',
   facebookPage: '603289706669016',
-  appleAppName: 'Quran - by Quran.com - قرآن',
+  appleAppName: 'Quran - by Tsirwah',
   appleAppId: '1118663303',
   appleAppUrl: 'https://apps.apple.com/us/app/quran-by-quran-com-qran/id1118663303',
   androidAppName: 'Quran for Android',
@@ -45,7 +45,7 @@ export function createSEOConfig({
   return {
     title: seoTitle,
     description,
-    titleTemplate: '%s - Quran.com',
+    titleTemplate: '%s - Tsirwah Quran',
     defaultTitle: config.siteName,
     dangerouslySetAllPagesToNoFollow: !isProduction, // @see https://github.com/garmeeh/next-seo#dangerouslySetAllPagesToNoFollow
     dangerouslySetAllPagesToNoIndex: !isProduction, // @see https://github.com/garmeeh/next-seo#dangerouslySetAllPagesToNoIndex

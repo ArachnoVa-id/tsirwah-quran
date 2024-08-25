@@ -37,14 +37,16 @@
   justify-content: center;
   width: calc(2.5 * var(--spacing-medium));
   height: calc(2.5 * var(--spacing-medium));
-  border-radius: var(--border-radius-default);
-  transform: rotate(45deg);
+  border-radius: 50%; /* Mengubah bentuk menjadi lingkaran */
   margin-inline-end: var(--spacing-large);
-  & > span {
-    transform: rotate(-45deg);
-    font-weight: var(--font-weight-bold);
-  }
+  /* Hapus transformasi rotasi */
 }
+
+.surahNumber > span {
+  font-weight: var(--font-weight-bold);
+  /* Hapus transformasi rotasi */
+}
+
 .surahNameContainer {
   display: flex;
   flex-direction: column;
