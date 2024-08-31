@@ -3,12 +3,12 @@ import { useMemo } from 'react';
 
 import useTranslation from 'next-translate/useTranslation';
 
-import { PopoverMenuExpandDirection } from '../PopoverMenu/PopoverMenu';
+// import { PopoverMenuExpandDirection } from '../PopoverMenu/PopoverMenu';
 
 import styles from './Footer.module.scss';
 import FooterThemeSwitcher from './FooterThemeSwitcher';
 
-import LanguageSelector from '@/components/Navbar/LanguageSelector';
+// import LanguageSelector from '@/components/Navbar/LanguageSelector';
 import Link, { LinkVariant } from '@/dls/Link/Link';
 import { toLocalizedDate } from '@/utils/locale';
 
@@ -35,7 +35,8 @@ const BottomSection = () => {
           </Link>
         </div>
         <div className={styles.copyright}>
-          © {localizedCurrentYear}{' '}
+          © {localizedCurrentYear}
+          {' Tsirwah Quran. Atribusi: '}
           <Link href="https://quran.com" variant={LinkVariant.Highlight} shouldPrefetch={false}>
             {
               // we don't want to localize Quran.com text
@@ -50,12 +51,12 @@ const BottomSection = () => {
         <div className={styles.actionContainer}>
           <FooterThemeSwitcher />
         </div>
-        <div className={styles.actionContainer}>
+        {/* <div className={styles.actionContainer}>
           <LanguageSelector
             shouldShowSelectedLang
             expandDirection={PopoverMenuExpandDirection.TOP}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

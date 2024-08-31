@@ -7,9 +7,9 @@ import DrawerSearchIcon from '../Buttons/DrawerSearchIcon';
 
 import styles from './Header.module.scss';
 
-import TarteelVoiceSearchTrigger from '@/components/TarteelVoiceSearch/Trigger';
+// import TarteelVoiceSearchTrigger from '@/components/TarteelVoiceSearch/Trigger';
 import Separator from '@/dls/Separator/Separator';
-import { logButtonClick } from '@/utils/eventLogger';
+// import { logButtonClick } from '@/utils/eventLogger';
 
 interface Props {
   isVoiceFlowStarted: boolean;
@@ -38,12 +38,13 @@ const Header: React.FC<Props> = ({
   return (
     <>
       {isVoiceFlowStarted ? (
-        <TarteelVoiceSearchTrigger
-          onClick={() => {
-            logButtonClick('search_drawer_voice_search_stop_flow');
-          }}
-        />
+        <></>
       ) : (
+        // <TarteelVoiceSearchTrigger
+        //   onClick={() => {
+        //     logButtonClick('search_drawer_voice_search_stop_flow');
+        //   }}
+        // />
         <>
           <DrawerSearchIcon />
           <div className={classNames(styles.searchInputContainer)}>
@@ -67,11 +68,11 @@ const Header: React.FC<Props> = ({
                 <Separator isVertical className={styles.separator} />
               </>
             )}
-            <TarteelVoiceSearchTrigger
+            {/* <TarteelVoiceSearchTrigger
               onClick={() => {
                 logButtonClick('search_drawer_voice_search_start_flow');
               }}
-            />
+            /> */}
           </div>
         </>
       )}
