@@ -55,7 +55,7 @@
     "exp-tip": "<span>Ubah konten yang ditampilkan di bawah</span><br></br> <boldSpan>Pengaturan</boldSpan> > <boldSpan>Kata per Kata</boldSpan>",
     "exp-tip-no-select": "<span>Centang opsi tampilan tooltip dan pilih opsi <br></br> Terjemahan dan/atau Transliterasi</span><br></br><span> di bawah </span><boldSpan>Pengaturan</boldSpan> > <boldSpan>Kata per Kata</boldSpan><span>, untuk</span><br></br> <span>mengaktifkan fitur ini.</span>",
     "experience": "Pengalaman",
-    "play": "Putar Audio",
+    "play": "Dengarkan",
     "playback-normal": "Normal",
     "playback-speed": "Kecepatan Pemutaran",
     "playback-speed-unit": "x",
@@ -70,7 +70,7 @@
       "pause": "Berhenti sebentar",
       "pause-audio": "Jeda Audio",
       "play": "Mainkan",
-      "play-audio": "Putar Audio",
+      "play-audio": "Dengarkan",
       "play-range": "Jankau memainkan",
       "previous-ayah": "Ayat sebelumnya",
       "repeat-1-verse": "Ulangi Ayat",
@@ -93,7 +93,7 @@
   "ayah": "Ayat",
   "ayahs": "Ayat",
   "beta": "Beta",
-  "bookmark": "Penanda",
+  "bookmark": "Tandai",
   "bookmarked": "Ditandai",
   "both": "Keduanya",
   "cancel": "Batal",
@@ -264,8 +264,8 @@
   "quran-radio": "Radio Qur'an",
   "reading-history": "Riwayat membaca",
   "reading-preference": {
-    "reading": "Membaca",
-    "translation": "Terjemahan"
+    "reading": "Halaman",
+    "translation": "Per Ayat"
   },
   "recitation": "Pembacaan",
   "reciter": "Qari",
@@ -397,7 +397,7 @@
   "wbw-transliteration": "Transliterasi per kata",
   "word-click": {
     "no-audio": "Tidak ada suara",
-    "play-audio": "Putar Audio",
+    "play-audio": "Dengarkan",
     "title": "Klik Kata"
   },
   "word-tooltip": "Tooltip Kata",
