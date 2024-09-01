@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
 import clipboardCopy from 'clipboard-copy';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useSelector, shallowEqual } from 'react-redux';
 
 import VerseActionAdvancedCopy from '@/components/Verse/VerseActionAdvancedCopy';
-import NewLabel from '@/dls/Badge/NewLabel';
+// import NewLabel from '@/dls/Badge/NewLabel';
 import PopoverMenu from '@/dls/PopoverMenu/PopoverMenu';
 import { ToastStatus, useToast } from '@/dls/Toast/Toast';
 import ChevronLeftIcon from '@/icons/chevron-left.svg';
 import CopyLinkIcon from '@/icons/copy-link.svg';
 import CopyIcon from '@/icons/copy.svg';
-import VideoIcon from '@/icons/video.svg';
+// import VideoIcon from '@/icons/video.svg';
 import { selectQuranReaderStyles } from '@/redux/slices/QuranReader/styles';
-import QueryParam from '@/types/QueryParam';
+// import QueryParam from '@/types/QueryParam';
 import Verse from '@/types/Verse';
 import { logButtonClick } from '@/utils/eventLogger';
-import { getQuranMediaMakerNavigationUrl } from '@/utils/navigation';
+// import { getQuranMediaMakerNavigationUrl } from '@/utils/navigation';
 import { getWindowOrigin } from '@/utils/url';
 import { getVerseAndChapterNumbersFromKey } from '@/utils/verse';
 import { getWordTextFieldNameByFont } from '@/utils/word';
@@ -63,7 +63,7 @@ const ShareVerseActionsMenu: React.FC<Props> = ({
   const [isCopied, setIsCopied] = useState(false);
   const quranReaderStyles = useSelector(selectQuranReaderStyles, shallowEqual);
   const toast = useToast();
-  const router = useRouter();
+  // const router = useRouter();
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
@@ -111,16 +111,16 @@ const ShareVerseActionsMenu: React.FC<Props> = ({
     setSelectedMenu(VerseActionsOverflowMenu.Main);
   };
 
-  const onGenerateClicked = () => {
-    logButtonClick(`generate_media_verse_action`);
-    router.push(
-      getQuranMediaMakerNavigationUrl({
-        [QueryParam.SURAH]: verse.chapterId as string,
-        [QueryParam.VERSE_FROM]: String(verse.verseNumber),
-        [QueryParam.VERSE_TO]: String(verse.verseNumber),
-      }),
-    );
-  };
+  // const onGenerateClicked = () => {
+  //   logButtonClick(`generate_media_verse_action`);
+  //   router.push(
+  //     getQuranMediaMakerNavigationUrl({
+  //       [QueryParam.SURAH]: verse.chapterId as string,
+  //       [QueryParam.VERSE_FROM]: String(verse.verseNumber),
+  //       [QueryParam.VERSE_TO]: String(verse.verseNumber),
+  //     }),
+  //   );
+  // };
   return (
     <div>
       <PopoverMenu.Item shouldFlipOnRTL icon={<ChevronLeftIcon />} onClick={onBackClicked}>
@@ -133,10 +133,10 @@ const ShareVerseActionsMenu: React.FC<Props> = ({
       <PopoverMenu.Item onClick={onCopyLinkClicked} icon={<CopyLinkIcon />}>
         {t('quran-reader:cpy-link')}
       </PopoverMenu.Item>
-      <PopoverMenu.Item onClick={onGenerateClicked} icon={<VideoIcon />}>
+      {/* <PopoverMenu.Item onClick={onGenerateClicked} icon={<VideoIcon />}>
         {t('quran-reader:generate-media')}
         <NewLabel />
-      </PopoverMenu.Item>
+      </PopoverMenu.Item> */}
 
       <VerseActionAdvancedCopy
         onActionTriggered={onActionTriggered}

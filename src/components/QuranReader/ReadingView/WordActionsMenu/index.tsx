@@ -1,6 +1,6 @@
 import React from 'react';
 
-import QuranReflectButton from '../../QuranReflectButton';
+// import QuranReflectButton from '../../QuranReflectButton';
 
 import styles from './WordActionsMenu.module.scss';
 
@@ -23,11 +23,11 @@ const ReadingViewWordActionsMenu: React.FC<Props> = ({ word, onActionTriggered }
         isTranslationView={false}
         onActionTriggered={onActionTriggered}
       />
-      <QuranReflectButton
+      {/* <QuranReflectButton
         verseKey={word.verseKey}
         isTranslationView={false}
         onActionTriggered={onActionTriggered}
-      />
+      /> */}
       <TranslationsButton verse={word.verse} onActionTriggered={onActionTriggered} />
       {word?.verse?.timestamps && (
         <PlayVerseAudioButton

@@ -44,7 +44,7 @@ const TAFSIRS_INITIAL_STATE: TafsirsSettings = {
   isUsingDefaultTafsirs: true,
 };
 
-export const DEFAULT_TRANSLATIONS = [131]; // Dr. Mustafa Khattab, the Clear Quran
+export const DEFAULT_TRANSLATIONS = [33]; // Dr. Mustafa Khattab, the Clear Quran
 
 const TRANSLATIONS_INITIAL_STATE: TranslationsSettings = {
   selectedTranslations: DEFAULT_TRANSLATIONS,
@@ -57,12 +57,12 @@ const QURAN_READER_STYLES_INITIAL_STATE: QuranReaderStyles = {
   quranTextFontScale: 3,
   translationFontScale: 3,
   wordByWordFontScale: 3,
-  quranFont: QuranFont.MadaniV1,
-  mushafLines: MushafLines.SixteenLines,
+  quranFont: QuranFont.MadaniV2,
+  mushafLines: MushafLines.FifteenLines,
   isUsingDefaultFont: true,
 };
 
-const DEFAULT_WBW_LOCALE = 'en';
+const DEFAULT_WBW_LOCALE = 'id';
 
 const READING_PREFERENCES_INITIAL_STATE: ReadingPreferences = {
   readingPreference: ReadingPreference.Translation,
