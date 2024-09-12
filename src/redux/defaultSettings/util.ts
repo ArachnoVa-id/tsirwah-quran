@@ -34,7 +34,7 @@ export const getStoreInitialState = (locale: string): RootState => {
   };
 };
 
-const DEFAULT_LOCALE = 'en';
+const DEFAULT_LOCALE = 'id';
 
 /**
  * Dynamically load the default settings of the locale passed.
