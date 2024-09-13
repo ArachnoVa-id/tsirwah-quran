@@ -9,7 +9,8 @@ import useTranslation from 'next-translate/useTranslation';
 
 import Link from '../dls/Link/Link';
 import SurahPreviewRow from '../dls/SurahPreview/SurahPreviewRow';
-import Tabs from '../dls/Tabs/Tabs';
+import Switch from '../dls/Switch/Switch';
+// import Tabs from '../dls/Tabs/Tabs';
 
 import styles from './ChapterAndJuzList.module.scss';
 import ChapterAndJuzListSkeleton from './ChapterAndJuzListSkeleton';
@@ -79,9 +80,9 @@ const ChapterAndJuzList: React.FC<ChapterAndJuzListProps> = ({
 
   const tabs = useMemo(
     () => [
-      { title: t(`common:${View.Surah}`), value: View.Surah },
-      { title: t(`common:${View.Juz}`), value: View.Juz, id: 'juz-tab' },
-      { title: t(`common:${View.RevelationOrder}`), value: View.RevelationOrder },
+      { name: t(`common:${View.Surah}`), value: View.Surah },
+      { name: t(`common:${View.Juz}`), value: View.Juz, id: 'juz-tab' },
+      { name: t(`common:${View.RevelationOrder}`), value: View.RevelationOrder },
     ],
     [t],
   );
@@ -103,7 +104,7 @@ const ChapterAndJuzList: React.FC<ChapterAndJuzListProps> = ({
   return (
     <>
       <div className={styles.tabsContainer}>
-        <Tabs tabs={tabs} selected={view} onSelect={onTabSelected} />
+        <Switch items={tabs} selected={view} onSelect={onTabSelected} />
         <div className={styles.sorter}>
           <div className={styles.uppercase}>{t('common:sort.by')}:</div>
           <div
