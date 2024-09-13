@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import DailyReminder from './DailyReminder';
+// import DailyReminder from './DailyReminder';
 import styles from './HomePageHero.module.scss';
-// import QuickLinks from './QuickLinks';
+import QuickLinks from './QuickLinks';
 
 import CommandBarTrigger from '@/components/CommandBar/CommandBarTrigger';
 
@@ -19,11 +19,11 @@ const HomePageHero = () => {
       <div data-theme="light">
         <PlayRadioButton />
         <div className={styles.innerContainer}>
-          <DailyReminder />
+          {/* <DailyReminder /> */}
           <CommandBarTrigger />
-          {/* <div className={styles.quickLinksContainer}>
+          <div className={styles.quickLinksContainer}>
             <QuickLinks />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

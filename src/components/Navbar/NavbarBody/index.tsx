@@ -55,7 +55,7 @@ const NavbarBody: React.FC = () => {
     <div className={styles.itemsContainer}>
       <div className={styles.centerVertically}>
         <div className={styles.leftCTA}>
-          <>
+          {/* <>
             <Button
               tooltip={t('menu')}
               variant={ButtonVariant.Ghost}
@@ -66,12 +66,25 @@ const NavbarBody: React.FC = () => {
               <IconMenu />
             </Button>
             <NavigationDrawer />
-          </>
+          </> */}
           <NavbarLogoWrapper />
         </div>
       </div>
       <div className={styles.centerVertically}>
         <div className={styles.rightCTA}>
+          <>
+            <Button
+              tooltip={t('search.title')}
+              variant={ButtonVariant.Ghost}
+              onClick={openSearchDrawer}
+              shape={ButtonShape.Circle}
+              shouldFlipOnRTL={false}
+              ariaLabel={t('search.title')}
+            >
+              <IconSearch />
+            </Button>
+            <SearchDrawer />
+          </>
           <>
             {/* <ProfileAvatarButton /> */}
             {/* <LanguageSelector /> */}
@@ -89,16 +102,15 @@ const NavbarBody: React.FC = () => {
           </>
           <>
             <Button
-              tooltip={t('search.title')}
+              tooltip={t('menu')}
               variant={ButtonVariant.Ghost}
-              onClick={openSearchDrawer}
               shape={ButtonShape.Circle}
-              shouldFlipOnRTL={false}
-              ariaLabel={t('search.title')}
+              onClick={openNavigationDrawer}
+              ariaLabel={t('aria.nav-drawer-open')}
             >
-              <IconSearch />
+              <IconMenu />
             </Button>
-            <SearchDrawer />
+            <NavigationDrawer />
           </>
         </div>
       </div>
