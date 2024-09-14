@@ -23,7 +23,7 @@ const NavigationDrawer = () => {
   return (
     <Drawer
       type={DrawerType.Navigation}
-      side={DrawerSide.Left}
+      side={DrawerSide.Right}
       header={
         <div className={styles.centerVertically}>
           <div className={styles.leftCTA}>

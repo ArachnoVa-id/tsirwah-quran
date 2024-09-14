@@ -6,7 +6,7 @@ import NavigationDrawerItem from '../NavigationDrawerItem';
 
 import styles from './NavigationDrawerBody.module.scss';
 
-import FundraisingBanner from '@/components/Fundraising/FundraisingBanner';
+// import FundraisingBanner from '@/components/Fundraising/FundraisingBanner';
 import IconDevelopers from '@/icons/developers.svg';
 import IconFeedback from '@/icons/feedback.svg';
 import IconHome from '@/icons/home.svg';
@@ -14,14 +14,14 @@ import IconInfo from '@/icons/info.svg';
 import IconLock from '@/icons/lock.svg';
 import MobileIcon from '@/icons/mobile.svg';
 import IconProductUpdates from '@/icons/product-updates.svg';
-import IconQ from '@/icons/Q_simple.svg';
-import QuranReflect from '@/icons/QR.svg';
+// import IconQ from '@/icons/Q_simple.svg';
+// import QuranReflect from '@/icons/QR.svg';
 import IconQuestionMark from '@/icons/question-mark.svg';
 import IconRadio2 from '@/icons/radio-2.svg';
 import IconRadio from '@/icons/radio.svg';
-import Tarteel from '@/icons/tarteel.svg';
+// import Tarteel from '@/icons/tarteel.svg';
 // import MobileApps from '../MobileApps';
-import { logTarteelLinkClick } from '@/utils/eventLogger';
+// import { logTarteelLinkClick } from '@/utils/eventLogger';
 
 // import IconDonate from '@/icons/donate.svg';
 // import IconUpdates from '@/icons/updates.svg';
@@ -31,7 +31,7 @@ const NavigationDrawerBody = () => {
   const { t } = useTranslation('common');
   return (
     <div className={styles.listItemsContainer}>
-      <FundraisingBanner />
+      {/* <FundraisingBanner /> */}
       <h3 className={styles.subtitle}>{t('menu')}</h3>
       <NavigationDrawerItem title={t('home')} icon={<IconHome />} href="/" />
       <NavigationDrawerItem href="/radio" title={t('quran-radio')} icon={<IconRadio2 />} />
@@ -59,7 +59,7 @@ const NavigationDrawerBody = () => {
       {/* <NavigationDrawerItem title="Jewels of Quran" icon={<IconCollection />} /> */}
       {/* <NavigationDrawerItem title="Names of Allah" icon={<IconCollection />} /> */}
       {/* <NavigationDrawerItem title="Revelation" icon={<IconCollection />} />  */}
-      <h3 className={styles.subtitle}>{t('network')}</h3>
+      {/* <h3 className={styles.subtitle}>{t('network')}</h3>
       <NavigationDrawerItem
         title="Quranicaudio.com"
         icon={<IconQ />}
@@ -110,7 +110,7 @@ const NavigationDrawerBody = () => {
         title={t('tarteel.name')}
         icon={<Tarteel />}
         href="https://download.tarteel.ai/"
-      />
+      /> */}
     </div>
   );
 };
