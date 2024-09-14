@@ -1,22 +1,5 @@
 {
-  "locales": [
-    "en",
-    "ar",
-    "bn",
-    "fa",
-    "fr",
-    "id",
-    "it",
-    "nl",
-    "pt",
-    "ru",
-    "sq",
-    "th",
-    "tr",
-    "ur",
-    "zh",
-    "ms"
-  ],
+  "locales": ["en", "ar", "id"],
   "defaultLocale": "id",
   "pages": {
     "*": ["common", "error", "radio", "quick-links", "onboarding"],

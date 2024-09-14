@@ -2,7 +2,7 @@ import React from 'react';
 
 import Head from 'next/head';
 
-const DEFAULT_LOCALE = 'en';
+const DEFAULT_LOCALE = 'id';
 
 const SURAH_NAMES_FONT = {
   type: 'font/woff2',
@@ -39,7 +39,7 @@ const QURAN_READER_LOCALE_PRELOADED_FONTS = {
   ],
   bn: [INDOPAK],
   ur: [INDOPAK],
-  id: [INDOPAK],
+  // id: [INDOPAK],
 } as Record<string, { type: string; location: string }[]>;
 
 interface Props {

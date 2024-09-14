@@ -22,7 +22,7 @@ interface Props {
 }
 
 const DOTS = '...';
-const DEFAULT_PAGE_SIZE = 20;
+const DEFAULT_PAGE_SIZE = 15;
 const DEFAULT_SIBLINGS_COUNT = 1;
 
 /**

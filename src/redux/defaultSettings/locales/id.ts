@@ -12,7 +12,9 @@ export default {
   },
   quranReaderStyles: {
     ...DEFAULT_SETTINGS.quranReaderStyles,
-    quranFont: QuranFont.IndoPak,
+    quranFont: QuranFont.MadaniV2,
   },
   translations: { ...DEFAULT_SETTINGS.translations, selectedTranslations: [DEFAULT_TRANSLATION] },
 } as DefaultSettings;
+
+// change this

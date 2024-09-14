@@ -7,7 +7,7 @@ const DEFAULT_LOCALE = 'id';
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps, locale: ctx?.locale || DEFAULT_LOCALE };
+    return { ...initialProps, locale: DEFAULT_LOCALE };
   }
 
   render = () => (
