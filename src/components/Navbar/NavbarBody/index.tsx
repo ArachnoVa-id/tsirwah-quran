@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useDispatch } from 'react-redux';
 
@@ -35,6 +36,7 @@ const logDrawerOpenEvent = (drawerName: string) => {
 
 const NavbarBody: React.FC = () => {
   const { t } = useTranslation('common');
+  const router = useRouter();
   const dispatch = useDispatch();
   const openNavigationDrawer = () => {
     logDrawerOpenEvent('navigation');
@@ -52,7 +54,9 @@ const NavbarBody: React.FC = () => {
   };
 
   return (
-    <div className={styles.itemsContainer}>
+    <div
+      className={router.pathname === '/' ? styles.itemsContainer : styles.itemsContainerExceptHome}
+    >
       <div className={styles.centerVertically}>
         <div className={styles.leftCTA}>
           {/* <>
@@ -80,6 +84,7 @@ const NavbarBody: React.FC = () => {
               shape={ButtonShape.Circle}
               shouldFlipOnRTL={false}
               ariaLabel={t('search.title')}
+              className={router.pathname === '/' ? '' : styles.buttonColorExceptHome}
             >
               <IconSearch />
             </Button>
@@ -95,6 +100,7 @@ const NavbarBody: React.FC = () => {
               onClick={openSettingsDrawer}
               ariaLabel={t('aria.change-settings')}
               id="settings-button"
+              className={router.pathname === '/' ? '' : styles.buttonColorExceptHome}
             >
               <IconSettings />
             </Button>
@@ -107,6 +113,7 @@ const NavbarBody: React.FC = () => {
               shape={ButtonShape.Circle}
               onClick={openNavigationDrawer}
               ariaLabel={t('aria.nav-drawer-open')}
+              className={router.pathname === '/' ? '' : styles.buttonColorExceptHome}
             >
               <IconMenu />
             </Button>
