@@ -39,7 +39,7 @@ type TranslationViewCellProps = {
   verseIndex: number;
   pageBookmarks: BookmarksMap | undefined;
   bookmarksRangeUrl: string;
-  // hasNotes?: boolean;
+  hasNotes?: boolean;
 };
 
 const TranslationViewCell: React.FC<TranslationViewCellProps> = ({
@@ -48,7 +48,8 @@ const TranslationViewCell: React.FC<TranslationViewCellProps> = ({
   verseIndex,
   pageBookmarks,
   bookmarksRangeUrl,
-  // hasNotes,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  hasNotes,
 }) => {
   const router = useRouter();
   const { startingVerse } = router.query;
@@ -157,7 +158,7 @@ const areVersesEqual = (
   nextProps: TranslationViewCellProps,
 ): boolean =>
   prevProps.verse.id === nextProps.verse.id &&
-  // prevProps.hasNotes === nextProps.hasNotes &&
+  prevProps.hasNotes === nextProps.hasNotes &&
   !verseFontChanged(
     prevProps.quranReaderStyles,
     nextProps.quranReaderStyles,
