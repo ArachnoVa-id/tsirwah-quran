@@ -96,7 +96,7 @@ const TranslationSelectionBody = () => {
 
   const renderTranslationGroup = useCallback(
     (language: string, translations: AvailableTranslation[]) => {
-      if (!translations) {
+      if (!translations || (language !== 'indonesian' && language !== 'english')) {
         return <></>;
       }
       return (

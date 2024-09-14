@@ -1,4 +1,4 @@
-@use "src/styles/utility";
+@use 'src/styles/utility';
 .container {
   display: flex;
   justify-content: space-between;
@@ -30,21 +30,42 @@
   }
 }
 
+// .surahNumber {
+//   background-color: var(--color-background-alternative-faint);
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: calc(2.5 * var(--spacing-medium));
+//   height: calc(2.5 * var(--spacing-medium));
+//   border-radius: 50%; /* Mengubah bentuk menjadi lingkaran */
+//   margin-inline-end: var(--spacing-large);
+//   /* Hapus transformasi rotasi */
+// }
+
 .surahNumber {
-  background-color: var(--color-background-alternative-faint);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: calc(2.5 * var(--spacing-medium));
   height: calc(2.5 * var(--spacing-medium));
-  border-radius: 50%; /* Mengubah bentuk menjadi lingkaran */
   margin-inline-end: var(--spacing-large);
-  /* Hapus transformasi rotasi */
 }
 
-.surahNumber > span {
+.surahNumber img.surahWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  object-fit: contain; /* Ensures the image fits within the div */
+  z-index: -1; /* Keeps the image behind the text */
+}
+
+.surahNumber span {
+  position: relative;
   font-weight: var(--font-weight-bold);
-  /* Hapus transformasi rotasi */
+  z-index: 1; /* Ensures the text is above the image */
 }
 
 .surahNameContainer {

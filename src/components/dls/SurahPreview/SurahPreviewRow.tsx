@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
 import classNames from 'classnames';
+import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 
 import styles from './SurahPreviewRow.module.scss';
@@ -40,6 +41,12 @@ const SurahPreviewRow = ({
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.surahNumber}>
+            <Image
+              src="/images/ayahWrapper.png"
+              alt="Wrapper"
+              className="surahWrapper"
+              layout="fill"
+            />
             <span>{localizedSurahNumber}</span>
           </div>
           <ChapterIconContainer
@@ -60,6 +67,12 @@ const SurahPreviewRow = ({
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.surahNumber}>
+          <Image
+            src="/images/ayahWrapper.png"
+            alt="Wrapper"
+            className="surahWrapper"
+            layout="fill"
+          />
           <span>{localizedSurahNumber}</span>
         </div>
         <div className={styles.surahNameContainer}>

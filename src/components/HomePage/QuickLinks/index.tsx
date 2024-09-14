@@ -11,11 +11,6 @@ const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
 
 const QUICK_LINKS = [
   {
-    slug: 'about-the-quran',
-    logKey: 'about-quran',
-    key: 'about-quran',
-  },
-  {
     slug: 'surah-al-mulk',
     logKey: 'surah-al-mulk',
     key: 'mulk',
@@ -34,6 +29,11 @@ const QUICK_LINKS = [
     slug: 'surah-al-waqiah',
     logKey: 'surah-al-waqiah',
     key: 'waqiah',
+  },
+  {
+    slug: 'juz/30',
+    logKey: 'juz-30',
+    key: 'Juz 30',
   },
 ];
 

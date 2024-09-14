@@ -16,9 +16,9 @@ import TranslationText from './TranslationText';
 import styles from './TranslationViewCell.module.scss';
 
 import { useOnboarding } from '@/components/Onboarding/OnboardingProvider';
-import QuranReflectButton from '@/components/QuranReader/QuranReflectButton';
+// import QuranReflectButton from '@/components/QuranReader/QuranReflectButton';
 import TafsirButton from '@/components/QuranReader/TafsirButton';
-import VerseNotes from '@/components/Verse/Notes';
+// import VerseNotes from '@/components/Verse/Notes';
 import OverflowVerseActionsMenu from '@/components/Verse/OverflowVerseActionsMenu';
 import PlayVerseAudioButton from '@/components/Verse/PlayVerseAudioButton';
 import VerseLink from '@/components/Verse/VerseLink';
@@ -39,7 +39,7 @@ type TranslationViewCellProps = {
   verseIndex: number;
   pageBookmarks: BookmarksMap | undefined;
   bookmarksRangeUrl: string;
-  hasNotes?: boolean;
+  // hasNotes?: boolean;
 };
 
 const TranslationViewCell: React.FC<TranslationViewCellProps> = ({
@@ -48,7 +48,7 @@ const TranslationViewCell: React.FC<TranslationViewCellProps> = ({
   verseIndex,
   pageBookmarks,
   bookmarksRangeUrl,
-  hasNotes,
+  // hasNotes,
 }) => {
   const router = useRouter();
   const { startingVerse } = router.query;
@@ -92,18 +92,18 @@ const TranslationViewCell: React.FC<TranslationViewCellProps> = ({
                 bookmarksRangeUrl={bookmarksRangeUrl}
               />
             </div>
-            <div className={styles.actionItem}>
+            {/* <div className={styles.actionItem}>
               <VerseNotes verseKey={verse.verseKey} isTranslationView hasNotes={hasNotes} />
-            </div>
+            </div> */}
             <div className={classNames(styles.actionItem, styles.priorityAction)}>
               <PlayVerseAudioButton verseKey={verse.verseKey} />
             </div>
             <div className={classNames(styles.actionItem)}>
               <TafsirButton verseKey={verse.verseKey} />
             </div>
-            <div className={classNames(styles.actionItem)}>
+            {/* <div className={classNames(styles.actionItem)}>
               <QuranReflectButton verseKey={verse.verseKey} />
-            </div>
+            </div> */}
           </div>
           <div className={styles.actionContainerRight}>
             <div className={styles.actionItem}>
@@ -157,7 +157,7 @@ const areVersesEqual = (
   nextProps: TranslationViewCellProps,
 ): boolean =>
   prevProps.verse.id === nextProps.verse.id &&
-  prevProps.hasNotes === nextProps.hasNotes &&
+  // prevProps.hasNotes === nextProps.hasNotes &&
   !verseFontChanged(
     prevProps.quranReaderStyles,
     nextProps.quranReaderStyles,
