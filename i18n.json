@@ -1,6 +1,7 @@
 {
-  "locales": ["en", "ar", "id"],
+  "locales": ["id", "en", "ar"],
   "defaultLocale": "id",
+  "localeDetection": false,
   "pages": {
     "*": ["common", "error", "radio", "quick-links", "onboarding"],
     "/": ["home", "radio", "collection", "reading-goal", "reciter"],

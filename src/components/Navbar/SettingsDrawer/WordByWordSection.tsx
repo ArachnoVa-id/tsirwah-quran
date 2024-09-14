@@ -1,6 +1,8 @@
 /* eslint-disable i18next/no-literal-string */
 /* eslint-disable max-lines */
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Slider from '@mui/material/Slider';
 import { Action } from '@reduxjs/toolkit';
 import uniqBy from 'lodash/uniqBy';
 import { useRouter } from 'next/router';
@@ -12,7 +14,7 @@ import Section from './Section';
 import styles from './WordByWordSection.module.scss';
 
 import DataFetcher from '@/components/DataFetcher';
-import Counter from '@/dls/Counter/Counter';
+// import Counter from '@/dls/Counter/Counter';
 import Checkbox from '@/dls/Forms/Checkbox/Checkbox';
 import Select, { SelectSize } from '@/dls/Forms/Select';
 import Link, { LinkVariant } from '@/dls/Link/Link';
@@ -28,8 +30,9 @@ import {
 import {
   MAXIMUM_WORD_BY_WORD_FONT_STEP,
   MINIMUM_FONT_STEP,
-  decreaseWordByWordFontScale,
-  increaseWordByWordFontScale,
+  // decreaseWordByWordFontScale,
+  // increaseWordByWordFontScale,
+  setWordByWordFontScale,
   selectWordByWordFontScale,
 } from '@/redux/slices/QuranReader/styles';
 import { WordByWordTranslationsResponse } from '@/types/ApiResponses';
@@ -83,29 +86,29 @@ const WordByWordSection = () => {
     );
   };
 
-  const onFontScaleIncreaseClicked = () => {
-    const newValue = wordByWordFontScale + 1;
-    logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue);
-    onWordByWordSettingsChange(
-      'wordByWordFontScale',
-      newValue,
-      increaseWordByWordFontScale(),
-      decreaseWordByWordFontScale(),
-      true,
-    );
-  };
+  // const onFontScaleIncreaseClicked = () => {
+  //   const newValue = wordByWordFontScale + 1;
+  //   logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue);
+  //   onWordByWordSettingsChange(
+  //     'wordByWordFontScale',
+  //     newValue,
+  //     increaseWordByWordFontScale(),
+  //     decreaseWordByWordFontScale(),
+  //     true,
+  //   );
+  // };
 
-  const onFontScaleDecreaseClicked = () => {
-    const newValue = wordByWordFontScale - 1;
-    logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue);
-    onWordByWordSettingsChange(
-      'wordByWordFontScale',
-      newValue,
-      decreaseWordByWordFontScale(),
-      increaseWordByWordFontScale(),
-      true,
-    );
-  };
+  // const onFontScaleDecreaseClicked = () => {
+  //   const newValue = wordByWordFontScale - 1;
+  //   logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue);
+  //   onWordByWordSettingsChange(
+  //     'wordByWordFontScale',
+  //     newValue,
+  //     decreaseWordByWordFontScale(),
+  //     increaseWordByWordFontScale(),
+  //     true,
+  //   );
+  // };
 
   const onWordByWordLocaleChange = (value: string) => {
     logValueChange('wbw_locale', wordByWordLocale, value);
@@ -275,7 +278,7 @@ const WordByWordSection = () => {
       </div>
       <Section.Row>
         <Section.Label>{t('fonts.font-size')}</Section.Label>
-        <Counter
+        {/* <Counter
           count={wordByWordFontScale}
           onIncrement={
             MAXIMUM_WORD_BY_WORD_FONT_STEP === wordByWordFontScale
@@ -285,6 +288,27 @@ const WordByWordSection = () => {
           onDecrement={
             MINIMUM_FONT_STEP === wordByWordFontScale ? null : onFontScaleDecreaseClicked
           }
+        /> */}
+      </Section.Row>
+      <Section.Row>
+        <Slider
+          aria-label="Font Scale"
+          defaultValue={wordByWordFontScale}
+          valueLabelDisplay="auto"
+          onChange={(event, newValue) => {
+            logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue as number);
+            onWordByWordSettingsChange(
+              'wordByWordFontScale',
+              newValue as number,
+              setWordByWordFontScale(newValue as number),
+              setWordByWordFontScale(newValue as number),
+              true,
+            );
+          }}
+          step={1}
+          marks
+          min={MINIMUM_FONT_STEP}
+          max={MAXIMUM_WORD_BY_WORD_FONT_STEP}
         />
       </Section.Row>
     </Section>

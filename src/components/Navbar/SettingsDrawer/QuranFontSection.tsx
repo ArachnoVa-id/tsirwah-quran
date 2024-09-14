@@ -1,6 +1,9 @@
 /* eslint-disable max-lines */
 import React, { useMemo } from 'react';
 
+// import { Slider } from '@mantine/core';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Slider from '@mui/material/Slider';
 import { Action } from '@reduxjs/toolkit';
 import useTranslation from 'next-translate/useTranslation';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
@@ -10,15 +13,18 @@ import QuranFontSectionFooter from './QuranFontSectionFooter';
 import Section from './Section';
 import VersePreview from './VersePreview';
 
-import Counter from '@/dls/Counter/Counter';
+// import Counter from '@/dls/Counter/Counter';
 import Select from '@/dls/Forms/Select';
+// import Slider from '@/dls/Slider';
+// import Slider from '@/dls/Slider';
 import Switch from '@/dls/Switch/Switch';
 import usePersistPreferenceGroup from '@/hooks/auth/usePersistPreferenceGroup';
 import { getQuranReaderStylesInitialState } from '@/redux/defaultSettings/util';
 import { resetLoadedFontFaces } from '@/redux/slices/QuranReader/font-faces';
 import {
-  decreaseQuranTextFontScale,
-  increaseQuranTextFontScale,
+  // decreaseQuranTextFontScale,
+  // increaseQuranTextFontScale,
+  setQuranTextFontScale,
   MINIMUM_FONT_STEP,
   selectQuranReaderStyles,
   setQuranFont,
@@ -163,25 +169,35 @@ const QuranFontSection = () => {
     );
   };
 
-  const onFontScaleDecreaseClicked = () => {
-    const value = quranTextFontScale - 1;
-    logValueChange('font_scale', quranTextFontScale, value);
-    onFontSettingsChange(
-      'quranTextFontScale',
-      value,
-      decreaseQuranTextFontScale(),
-      increaseQuranTextFontScale(),
-    );
-  };
+  // const onFontScaleDecreaseClicked = () => {
+  //   const value = quranTextFontScale - 1;
+  //   logValueChange('font_scale', quranTextFontScale, value);
+  //   onFontSettingsChange(
+  //     'quranTextFontScale',
+  //     value,
+  //     decreaseQuranTextFontScale(),
+  //     increaseQuranTextFontScale(),
+  //   );
+  // };
 
-  const onFontScaleIncreaseClicked = () => {
-    const value = quranTextFontScale + 1;
-    logValueChange('font_scale', quranTextFontScale, value);
+  // const onFontScaleIncreaseClicked = () => {
+  //   const value = quranTextFontScale + 1;
+  //   logValueChange('font_scale', quranTextFontScale, value);
+  //   onFontSettingsChange(
+  //     'quranTextFontScale',
+  //     value,
+  //     increaseQuranTextFontScale(),
+  //     decreaseQuranTextFontScale(),
+  //   );
+  // };
+
+  const handleFontScaleChange = (newValue: number) => {
+    logValueChange('font_scale', quranTextFontScale, newValue);
     onFontSettingsChange(
       'quranTextFontScale',
-      value,
-      increaseQuranTextFontScale(),
-      decreaseQuranTextFontScale(),
+      newValue,
+      setQuranTextFontScale(newValue),
+      setQuranTextFontScale(newValue),
     );
   };
 
@@ -215,12 +231,37 @@ const QuranFontSection = () => {
       )}
       <Section.Row id="font-size-section">
         <Section.Label>{t('fonts.font-size')}</Section.Label>
-        <Counter
+        {/* <Counter
           count={quranTextFontScale}
           onDecrement={quranTextFontScale === MINIMUM_FONT_STEP ? null : onFontScaleDecreaseClicked}
           onIncrement={
             quranTextFontScale === MAXIMUM_QURAN_FONT_STEP ? null : onFontScaleIncreaseClicked
           }
+        /> */}
+        {/* <div className={styles.sliderContainer}> */}
+        {/* <Slider
+          label="Font Scale"
+          name="quranTextFontScale"
+          value={[quranTextFontScale]}
+          onValueChange={handleFontScaleChange}
+          min={MINIMUM_FONT_STEP}
+          max={MAXIMUM_QURAN_FONT_STEP}
+          // step={1}
+          // disabled={false}
+        /> */}
+
+        {/* </div> */}
+      </Section.Row>
+      <Section.Row>
+        <Slider
+          aria-label="Font Scale"
+          defaultValue={quranTextFontScale}
+          valueLabelDisplay="auto"
+          onChange={(event, newValue) => handleFontScaleChange(newValue as number)}
+          step={1}
+          marks
+          min={MINIMUM_FONT_STEP}
+          max={MAXIMUM_QURAN_FONT_STEP}
         />
       </Section.Row>
       <Section.Row>

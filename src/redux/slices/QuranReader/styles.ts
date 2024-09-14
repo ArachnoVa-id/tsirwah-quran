@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import resetSettings from '@/redux/actions/reset-settings';
@@ -27,6 +28,10 @@ export const quranReaderStylesSlice = createSlice({
       ...state,
       quranTextFontScale: state.quranTextFontScale - 1,
     }),
+    setQuranTextFontScale: (state, action: PayloadAction<number>) => ({
+      ...state,
+      quranTextFontScale: action.payload,
+    }),
     increaseTranslationFontScale: (state) => ({
       ...state,
       translationFontScale: state.translationFontScale + 1,
@@ -34,6 +39,10 @@ export const quranReaderStylesSlice = createSlice({
     decreaseTranslationFontScale: (state) => ({
       ...state,
       translationFontScale: state.translationFontScale - 1,
+    }),
+    setTranslationFontScale: (state, action: PayloadAction<number>) => ({
+      ...state,
+      translationFontScale: action.payload,
     }),
     increaseTafsirFontScale: (state) => ({
       ...state,
@@ -43,6 +52,10 @@ export const quranReaderStylesSlice = createSlice({
       ...state,
       tafsirFontScale: state.tafsirFontScale - 1,
     }),
+    setTafsirFontScale: (state, action: PayloadAction<number>) => ({
+      ...state,
+      tafsirFontScale: action.payload,
+    }),
     increaseWordByWordFontScale: (state) => ({
       ...state,
       wordByWordFontScale: state.wordByWordFontScale + 1,
@@ -50,6 +63,10 @@ export const quranReaderStylesSlice = createSlice({
     decreaseWordByWordFontScale: (state) => ({
       ...state,
       wordByWordFontScale: state.wordByWordFontScale - 1,
+    }),
+    setWordByWordFontScale: (state, action: PayloadAction<number>) => ({
+      ...state,
+      wordByWordFontScale: action.payload,
     }),
     setMushafLines: (
       state,
@@ -128,13 +145,17 @@ export const quranReaderStylesSlice = createSlice({
 export const {
   increaseTafsirFontScale,
   decreaseTafsirFontScale,
+  setTafsirFontScale,
   setQuranFont,
   increaseQuranTextFontScale,
   decreaseQuranTextFontScale,
+  setQuranTextFontScale,
   increaseTranslationFontScale,
   decreaseTranslationFontScale,
+  setTranslationFontScale,
   increaseWordByWordFontScale,
   decreaseWordByWordFontScale,
+  setWordByWordFontScale,
   setMushafLines,
 } = quranReaderStylesSlice.actions;
 

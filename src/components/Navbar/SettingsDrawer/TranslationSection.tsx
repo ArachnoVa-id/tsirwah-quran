@@ -1,5 +1,7 @@
 import { useCallback, useMemo } from 'react';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Slider from '@mui/material/Slider';
 import { Action } from '@reduxjs/toolkit';
 import useTranslation from 'next-translate/useTranslation';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
@@ -9,14 +11,13 @@ import styles from './TranslationSection.module.scss';
 
 import DataFetcher from '@/components/DataFetcher';
 import { useOnboarding } from '@/components/Onboarding/OnboardingProvider';
-import Counter from '@/dls/Counter/Counter';
+// import Counter from '@/dls/Counter/Counter';
 import SelectionCard from '@/dls/SelectionCard/SelectionCard';
 import Skeleton from '@/dls/Skeleton/Skeleton';
 import usePersistPreferenceGroup from '@/hooks/auth/usePersistPreferenceGroup';
 import { setSettingsView, SettingsView } from '@/redux/slices/navbar';
 import {
-  decreaseTranslationFontScale,
-  increaseTranslationFontScale,
+  setTranslationFontScale,
   MAXIMUM_TRANSLATIONS_FONT_STEP,
   MINIMUM_FONT_STEP,
   selectQuranReaderStyles,
@@ -114,27 +115,27 @@ const TranslationSection = () => {
     onSettingsChange(key, value, action, undoAction, PreferenceGroup.QURAN_READER_STYLES);
   };
 
-  const onFontScaleDecreaseClicked = () => {
-    const newValue = translationFontScale - 1;
-    logValueChange('translation_font_scale', translationFontScale, newValue);
-    onTranslationSettingsChange(
-      'translationFontScale',
-      newValue,
-      decreaseTranslationFontScale(),
-      increaseTranslationFontScale(),
-    );
-  };
+  // const onFontScaleDecreaseClicked = () => {
+  //   const newValue = translationFontScale - 1;
+  //   logValueChange('translation_font_scale', translationFontScale, newValue);
+  //   onTranslationSettingsChange(
+  //     'translationFontScale',
+  //     newValue,
+  //     decreaseTranslationFontScale(),
+  //     increaseTranslationFontScale(),
+  //   );
+  // };
 
-  const onFontScaleIncreaseClicked = () => {
-    const newValue = translationFontScale + 1;
-    logValueChange('translation_font_scale', translationFontScale, newValue);
-    onTranslationSettingsChange(
-      'translationFontScale',
-      newValue,
-      increaseTranslationFontScale(),
-      decreaseTranslationFontScale(),
-    );
-  };
+  // const onFontScaleIncreaseClicked = () => {
+  //   const newValue = translationFontScale + 1;
+  //   logValueChange('translation_font_scale', translationFontScale, newValue);
+  //   onTranslationSettingsChange(
+  //     'translationFontScale',
+  //     newValue,
+  //     increaseTranslationFontScale(),
+  //     decreaseTranslationFontScale(),
+  //   );
+  // };
 
   return (
     <div className={styles.container}>
@@ -153,7 +154,7 @@ const TranslationSection = () => {
           {/* disable `onIncrement` function and UI, when translationFontScale is MAXIMUM_FONT_SCALE
             we do this by giving null to `onIncrement` prop
             same applies to `onDecrement` */}
-          <Counter
+          {/* <Counter
             count={translationFontScale}
             onIncrement={
               MAXIMUM_TRANSLATIONS_FONT_STEP === translationFontScale
@@ -163,6 +164,26 @@ const TranslationSection = () => {
             onDecrement={
               MINIMUM_FONT_STEP === translationFontScale ? null : onFontScaleDecreaseClicked
             }
+          /> */}
+        </Section.Row>
+        <Section.Row>
+          <Slider
+            aria-label="Font Scale"
+            defaultValue={translationFontScale}
+            valueLabelDisplay="auto"
+            onChange={(event, newValue) => {
+              logValueChange('word_by_word_font_scale', translationFontScale, newValue as number);
+              onTranslationSettingsChange(
+                'translationFontScale',
+                newValue as number,
+                setTranslationFontScale(newValue as number),
+                setTranslationFontScale(translationFontScale),
+              );
+            }}
+            step={1}
+            marks
+            min={MINIMUM_FONT_STEP}
+            max={MAXIMUM_TRANSLATIONS_FONT_STEP}
           />
         </Section.Row>
       </Section>
