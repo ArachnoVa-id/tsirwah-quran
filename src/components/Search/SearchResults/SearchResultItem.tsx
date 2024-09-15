@@ -33,6 +33,8 @@ const SearchResultItem: React.FC<Props> = ({ result, source, service = SearchSer
 
   const chaptersData = useGetChaptersData(lang);
 
+  console.log('chaptersData', chaptersData);
+
   if (!chaptersData) return null;
 
   const chapterNumber = getChapterNumberFromKey(result.verseKey);

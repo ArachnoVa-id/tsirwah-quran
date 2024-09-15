@@ -53,6 +53,8 @@ import { MushafLines, QuranFont } from 'types/QuranReader';
 export const SEARCH_FETCH_OPTIONS = {
   headers: {
     // eslint-disable-next-line @typescript-eslint/naming-convention
+    'Access-Control-Allow-Origin': '*',
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     'x-api-key': process.env.NEXT_PUBLIC_SEARCH_API_KEY,
   },
 };
@@ -218,9 +220,46 @@ export const getSearchResults = async (params: SearchRequest): Promise<SearchRes
  * @param {SearchRequestParams} params
  * @returns  {Promise<NewSearchResponse>}
  */
+// export const getNewSearchResults = async <T extends SearchMode>(
+//   params: SearchRequestParams<T>,
+// ): Promise<NewSearchResponse> => fetcher(makeNewSearchResultsUrl(params), SEARCH_FETCH_OPTIONS);
+
 export const getNewSearchResults = async <T extends SearchMode>(
   params: SearchRequestParams<T>,
-): Promise<NewSearchResponse> => fetcher(makeNewSearchResultsUrl(params), SEARCH_FETCH_OPTIONS);
+): Promise<NewSearchResponse> => {
+  // Construct the external API URL
+  const url = makeNewSearchResultsUrl(params);
+
+  // Send a request to the internal API route, which acts as a proxy
+  const response = await fetch('/api/search', {
+    method: 'POST',
+    headers: {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ url }), // Send the external URL in the request body
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch search results');
+  }
+  const data = await response.json();
+  // const searchResponse: NewSearchResponse = {
+  //   result: {
+  //     navigation: data.result?.navigation || [],
+  //     verses: data.result?.verses || [],
+  //   },
+  //   pagination: {
+  //     totalRecords: data.pagination.total_records || 0,
+  //     currentPage: data.pagination.current_page || 1,
+  //     nextPage: data.pagination.next_page || null,
+  //     perPage: data.pagination.per_page || 10,
+  //     totalPages: data.pagination.total_pages || 1,
+  //   },
+  // };
+
+  return data;
+};
 
 /**
  * Get the list of tafsirs.

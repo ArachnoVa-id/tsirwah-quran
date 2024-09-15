@@ -46,6 +46,10 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(self), geolocation=(self), fullscreen=*', // camera is disabled for all, microphone only for the current origin, geolocation only for the current origin and fullscreen for all including iframes.
   },
+  {
+    key: 'Access-Control-Allow-Origin',
+    value: '*', // Allow all origins to access the resource
+  },
 ];
 
 module.exports = securityHeaders;
