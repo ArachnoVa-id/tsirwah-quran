@@ -3,6 +3,7 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Slider from '@mui/material/Slider';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Action } from '@reduxjs/toolkit';
 import uniqBy from 'lodash/uniqBy';
 import { useRouter } from 'next/router';
@@ -43,6 +44,17 @@ import { removeItemFromArray } from '@/utils/array';
 import { logValueChange } from '@/utils/eventLogger';
 import { getLocaleName } from '@/utils/locale';
 import PreferenceGroup from 'types/auth/PreferenceGroup';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#02989a',
+    },
+    secondary: {
+      main: '#f8bbd0',
+    },
+  },
+});
 
 const WordByWordSection = () => {
   const { t, lang } = useTranslation('common');
@@ -291,25 +303,27 @@ const WordByWordSection = () => {
         /> */}
       </Section.Row>
       <Section.Row>
-        <Slider
-          aria-label="Font Scale"
-          defaultValue={wordByWordFontScale}
-          valueLabelDisplay="auto"
-          onChange={(event, newValue) => {
-            logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue as number);
-            onWordByWordSettingsChange(
-              'wordByWordFontScale',
-              newValue as number,
-              setWordByWordFontScale(newValue as number),
-              setWordByWordFontScale(newValue as number),
-              true,
-            );
-          }}
-          step={1}
-          marks
-          min={MINIMUM_FONT_STEP}
-          max={MAXIMUM_WORD_BY_WORD_FONT_STEP}
-        />
+        <ThemeProvider theme={theme}>
+          <Slider
+            aria-label="Font Scale"
+            defaultValue={wordByWordFontScale}
+            valueLabelDisplay="auto"
+            onChange={(event, newValue) => {
+              logValueChange('word_by_word_font_scale', wordByWordFontScale, newValue as number);
+              onWordByWordSettingsChange(
+                'wordByWordFontScale',
+                newValue as number,
+                setWordByWordFontScale(newValue as number),
+                setWordByWordFontScale(newValue as number),
+                true,
+              );
+            }}
+            step={1}
+            marks
+            min={MINIMUM_FONT_STEP}
+            max={MAXIMUM_WORD_BY_WORD_FONT_STEP}
+          />
+        </ThemeProvider>
       </Section.Row>
     </Section>
   );

@@ -1,7 +1,9 @@
+/* eslint-disable max-lines */
 import { useCallback, useMemo } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Slider from '@mui/material/Slider';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Action } from '@reduxjs/toolkit';
 import useTranslation from 'next-translate/useTranslation';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
@@ -29,6 +31,17 @@ import { logValueChange } from '@/utils/eventLogger';
 import { toLocalizedNumber } from '@/utils/locale';
 import { TranslationsResponse } from 'types/ApiResponses';
 import PreferenceGroup from 'types/auth/PreferenceGroup';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#02989a',
+    },
+    secondary: {
+      main: '#f8bbd0',
+    },
+  },
+});
 
 const TranslationSection = () => {
   const {
@@ -167,24 +180,26 @@ const TranslationSection = () => {
           /> */}
         </Section.Row>
         <Section.Row>
-          <Slider
-            aria-label="Font Scale"
-            defaultValue={translationFontScale}
-            valueLabelDisplay="auto"
-            onChange={(event, newValue) => {
-              logValueChange('word_by_word_font_scale', translationFontScale, newValue as number);
-              onTranslationSettingsChange(
-                'translationFontScale',
-                newValue as number,
-                setTranslationFontScale(newValue as number),
-                setTranslationFontScale(translationFontScale),
-              );
-            }}
-            step={1}
-            marks
-            min={MINIMUM_FONT_STEP}
-            max={MAXIMUM_TRANSLATIONS_FONT_STEP}
-          />
+          <ThemeProvider theme={theme}>
+            <Slider
+              aria-label="Font Scale"
+              defaultValue={translationFontScale}
+              valueLabelDisplay="auto"
+              onChange={(event, newValue) => {
+                logValueChange('word_by_word_font_scale', translationFontScale, newValue as number);
+                onTranslationSettingsChange(
+                  'translationFontScale',
+                  newValue as number,
+                  setTranslationFontScale(newValue as number),
+                  setTranslationFontScale(translationFontScale),
+                );
+              }}
+              step={1}
+              marks
+              min={MINIMUM_FONT_STEP}
+              max={MAXIMUM_TRANSLATIONS_FONT_STEP}
+            />
+          </ThemeProvider>
         </Section.Row>
       </Section>
     </div>
