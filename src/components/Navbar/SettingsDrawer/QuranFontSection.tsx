@@ -259,7 +259,7 @@ const QuranFontSection = () => {
           valueLabelDisplay="auto"
           onChange={(event, newValue) => handleFontScaleChange(newValue as number)}
           step={1}
-          marks
+          // marks
           min={MINIMUM_FONT_STEP}
           max={MAXIMUM_QURAN_FONT_STEP}
         />
