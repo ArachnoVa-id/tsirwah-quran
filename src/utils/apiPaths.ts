@@ -179,7 +179,7 @@ export const makeNavigationSearchUrl = (query: string): string => makeUrl('/navi
 export const makeTafsirsUrl = (language: string): string =>
   makeUrl('/resources/tafsirs', { language });
 
-export const makeTafsirContentUrl = (
+export const makeTafsirContentUrl = async (
   tafsirId: number | string,
   verseKey: string,
   options: { lang: string; quranFont: QuranFont; mushafLines: MushafLines },
@@ -190,6 +190,16 @@ export const makeTafsirContentUrl = (
     ...getDefaultWordFields(options.quranFont),
     ...getMushafId(options.quranFont, options.mushafLines),
   };
+  if (tafsirId === 'id-tafsir-tahlili' || tafsirId === 'id-tafsir-ringkas-kemenag') {
+    const quranApiUrl = `https://api.quran.com/api/v4/verses/by_key/${verseKey}`;
+    const quranApiResponse = await fetch(quranApiUrl);
+    if (!quranApiResponse.ok) {
+      throw new Error('Error fetching verse from Quran.com API');
+    }
+    const quranApiData = await quranApiResponse.json();
+    const verseId = quranApiData.verse.id;
+    return `https://web-api.qurankemenag.net/quran-tafsir/${verseId}`;
+  }
   return makeUrl(`/tafsirs/${tafsirId}/by_ayah/${verseKey}`, params);
 };
 

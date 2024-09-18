@@ -4,6 +4,7 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 import classNames from 'classnames';
+import { camelizeKeys } from 'humps';
 import useTranslation from 'next-translate/useTranslation';
 import { useSelector, shallowEqual } from 'react-redux';
 import useSWR from 'swr/immutable';
@@ -24,6 +25,7 @@ import Separator from '@/dls/Separator/Separator';
 import usePersistPreferenceGroup from '@/hooks/auth/usePersistPreferenceGroup';
 import { selectQuranReaderStyles } from '@/redux/slices/QuranReader/styles';
 import { selectTafsirs, setSelectedTafsirs } from '@/redux/slices/QuranReader/tafsirs';
+import Verse from '@/types/Verse';
 import { makeTafsirContentUrl, makeTafsirsUrl } from '@/utils/apiPaths';
 import {
   logButtonClick,
@@ -32,7 +34,11 @@ import {
   logValueChange,
 } from '@/utils/eventLogger';
 import { getLanguageDataById } from '@/utils/locale';
-import { fakeNavigate, getVerseSelectedTafsirNavigationUrl } from '@/utils/navigation';
+import {
+  fakeNavigate,
+  getVerseSelectedTafsirNavigationUrl,
+  // getIndonesianVerseSelectedTafsirNavigationUrl,
+} from '@/utils/navigation';
 import {
   getFirstTafsirOfLanguage,
   getSelectedTafsirLanguage,
@@ -88,6 +94,7 @@ const TafsirBody = ({
   const [selectedTafsirIdOrSlug, setSelectedTafsirIdOrSlug] = useState<number | string>(
     initialTafsirIdOrSlug || userPreferredTafsirIds?.[0],
   );
+  const [tafsirData, setTafsirData] = useState(null);
 
   // if user opened tafsirBody via a url, we will have initialTafsirIdOrSlug
   // we need to set this `initialTafsirIdOrSlug` as a selectedTafsirIdOrSlug
@@ -100,17 +107,28 @@ const TafsirBody = ({
   }, [initialTafsirIdOrSlug]);
 
   const onTafsirSelected = useCallback(
-    (id: number, slug: string) => {
+    async (id: number, slug: string) => {
       logItemSelectionChange('tafsir', id);
       setSelectedTafsirIdOrSlug(slug);
-      fakeNavigate(
-        getVerseSelectedTafsirNavigationUrl(
-          Number(selectedChapterId),
-          Number(selectedVerseNumber),
-          slug,
-        ),
-        lang,
-      );
+      if (id !== 820 && id !== 821) {
+        fakeNavigate(
+          getVerseSelectedTafsirNavigationUrl(
+            Number(selectedChapterId),
+            Number(selectedVerseNumber),
+            slug,
+          ),
+          lang,
+        );
+      } else {
+        fakeNavigate(
+          getVerseSelectedTafsirNavigationUrl(
+            Number(selectedChapterId),
+            Number(selectedVerseNumber),
+            slug,
+          ),
+          lang,
+        );
+      }
       onSettingsChange(
         'selectedTafsirs',
         [slug],
@@ -175,11 +193,74 @@ const TafsirBody = ({
     }
   };
 
+  const fetchTafsirContent = useCallback(async () => {
+    const resolvedUrl = await makeTafsirContentUrl('ar-tafsir-al-wasit', selectedVerseKey, {
+      lang,
+      quranFont: quranReaderStyles.quranFont,
+      mushafLines: quranReaderStyles.mushafLines,
+    });
+
+    const response = await fetch(resolvedUrl);
+    if (!response.ok) {
+      throw new Error('Failed to fetch Tafsir content');
+    }
+    const apiData = await response.json();
+
+    if (apiData?.tafsir) {
+      const { verses } = camelizeKeys(apiData.tafsir);
+      setTafsirData(verses);
+    }
+  }, [lang, selectedVerseKey, quranReaderStyles]);
+
+  // Using useEffect to fetch the data on component mount or update
+  useEffect(() => {
+    fetchTafsirContent();
+  }, [fetchTafsirContent]);
+
+  // Assuming `tafsirData` is stored in the component state
+
   const renderTafsir = useCallback(
     (data: TafsirContentResponse) => {
-      if (!data || !data.tafsir) return <TafsirSkeleton />;
+      if (!data) return <TafsirSkeleton />;
 
-      const { verses, text, languageId } = data.tafsir;
+      const {
+        verses: defaultVerses,
+        text: defaultText,
+        languageId: defaultLanguage,
+      } = {
+        verses: {},
+        text: '',
+        languageId: 0,
+      };
+
+      let verses = defaultVerses;
+      let text = defaultText;
+      let languageId = defaultLanguage;
+
+      if (data?.tafsir) {
+        // eslint-disable-next-line prefer-destructuring
+        // verses = data.tafsir.verses;
+        // eslint-disable-next-line prefer-destructuring
+        text = data.tafsir.text;
+        // eslint-disable-next-line prefer-destructuring
+        languageId = data.tafsir.languageId;
+      }
+
+      if (tafsirData) {
+        verses = tafsirData as Record<string, Verse>;
+      }
+
+      if (!tafsirData) return <TafsirSkeleton />;
+
+      if (data?.data) {
+        if (selectedTafsirIdOrSlug === 'id-tafsir-tahlili') {
+          text = data.data.tafsir.tahlili;
+        } else if (selectedTafsirIdOrSlug === 'id-tafsir-ringkas-kemenag') {
+          text = data.data.tafsir.wajiz;
+        }
+        languageId = 67;
+      }
+
       const langData = getLanguageDataById(languageId);
 
       const [firstVerseKey, lastVerseKey] = getFirstAndLastVerseKeys(verses);
@@ -226,7 +307,7 @@ const TafsirBody = ({
           {!text && (
             <TafsirMessage>
               {t('tafsir.no-text', {
-                tafsirName: data.tafsir.translatedName.name,
+                tafsirName: '',
               })}
             </TafsirMessage>
           )}
@@ -251,7 +332,7 @@ const TafsirBody = ({
         </div>
       );
     },
-    [chaptersData, lang, scrollToTop, selectedChapterId, selectedTafsirIdOrSlug, t],
+    [chaptersData, lang, scrollToTop, selectedChapterId, selectedTafsirIdOrSlug, t, tafsirData],
   );
 
   const onChapterIdChange = (newChapterId) => {
@@ -298,6 +379,23 @@ const TafsirBody = ({
     />
   );
 
+  const [url, setUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchUrl = async () => {
+      const resolvedUrl = await makeTafsirContentUrl(selectedTafsirIdOrSlug, selectedVerseKey, {
+        lang,
+        quranFont: quranReaderStyles.quranFont,
+        mushafLines: quranReaderStyles.mushafLines,
+      });
+      setUrl(resolvedUrl);
+    };
+
+    fetchUrl();
+  }, [selectedTafsirIdOrSlug, selectedVerseKey, lang, quranReaderStyles]);
+
+  if (!url) return <TafsirSkeleton />; // Show loading state until the URL is resolved
+
   const body = (
     <div
       className={classNames(
@@ -308,15 +406,7 @@ const TafsirBody = ({
       // @see {https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/translate}
       translate="no"
     >
-      <DataFetcher
-        loading={TafsirSkeleton}
-        queryKey={makeTafsirContentUrl(selectedTafsirIdOrSlug, selectedVerseKey, {
-          lang,
-          quranFont: quranReaderStyles.quranFont,
-          mushafLines: quranReaderStyles.mushafLines,
-        })}
-        render={renderTafsir}
-      />
+      <DataFetcher loading={TafsirSkeleton} queryKey={url} render={renderTafsir} />
     </div>
   );
 

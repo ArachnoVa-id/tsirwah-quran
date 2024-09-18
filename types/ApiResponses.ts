@@ -123,4 +123,32 @@ export interface TafsirContentResponse extends BaseResponse {
     text: string;
     slug?: string;
   };
+  data: {
+    id: number;
+    surahId: number;
+    ayah: number;
+    page: number;
+    quarterHizb: number;
+    juz: number;
+    manzil: number;
+    arabic: string;
+    latin: string;
+    translation: string;
+    noFootnote: string | null;
+    footnotes: string | null;
+    surah: {
+      id: number;
+      arabic: string;
+      latin: string;
+      transliteration: string;
+      translation: string;
+      numAyah: number;
+      page: number;
+      location: string;
+    };
+    tafsir: {
+      wajiz: string;
+      tahlili: string;
+    };
+  };
 }

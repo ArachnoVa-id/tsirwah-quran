@@ -267,8 +267,48 @@ export const getNewSearchResults = async <T extends SearchMode>(
  * @param {string} language
  * @returns {Promise<TafsirsResponse>}
  */
-export const getTafsirs = async (language: string): Promise<TafsirsResponse> =>
-  fetcher(makeTafsirsUrl(language));
+// export const getTafsirs = async (language: string): Promise<TafsirsResponse> =>
+//   fetcher(makeTafsirsUrl(language));
+
+export const getTafsirs = async (language: string): Promise<TafsirsResponse> => {
+  // Fetch the data from the API using the fetcher
+  const response: TafsirsResponse = await fetcher(makeTafsirsUrl(language));
+
+  // Define your custom tafsir object
+  const customTafsir = [
+    {
+      id: 820,
+      name: 'Tafsir Ringkas Kemenag',
+      authorName: 'Kementrian Agama Republik Indonesia',
+      slug: 'tafsir-ringkas-kemenag-id',
+      languageName: 'indonesian',
+      translatedName: {
+        name: 'Tafsir Ringkas Kemenag',
+        languageName: 'indonesian',
+      },
+    },
+    {
+      id: 821,
+      name: 'Tafsir Tahlili',
+      authorName: 'Kementrian Agama Republik Indonesia',
+      slug: 'tafsir-tahlili-id',
+      languageName: 'indonesian',
+      translatedName: {
+        name: 'Tafsir Tahlili',
+        languageName: 'indonesian',
+      },
+    },
+  ];
+
+  // Add the custom tafsir to the existing tafsirs in the response
+  const updatedResponse = {
+    ...response, // Preserve other properties of the response
+    tafsirs: [...response.tafsirs, ...customTafsir], // Merge the original tafsirs with the custom ones
+  };
+
+  // Return the updated response
+  return updatedResponse;
+};
 
 /**
  * Get a chapter's info
@@ -399,7 +439,7 @@ export const getChapterIdBySlug = async (slug: string, locale: string): Promise<
  * @param {MushafLines} mushafLines
  * @returns {Promise<TafsirContentResponse>}
  */
-export const getTafsirContent = (
+export const getTafsirContent = async (
   tafsirIdOrSlug: string,
   verseKey: string,
   quranFont: QuranFont,
@@ -407,7 +447,7 @@ export const getTafsirContent = (
   locale: string,
 ): Promise<TafsirContentResponse> => {
   return fetcher(
-    makeTafsirContentUrl(tafsirIdOrSlug as string, verseKey, {
+    await makeTafsirContentUrl(tafsirIdOrSlug as string, verseKey, {
       lang: locale,
       quranFont,
       mushafLines,

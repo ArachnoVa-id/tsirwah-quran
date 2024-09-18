@@ -32,6 +32,41 @@ const LanguageAndTafsirSelection = ({
       <Skeleton className={classNames(styles.tafsirSkeletonItem, styles.tafsirSelectionSkeleton)} />
     );
   }
+  const options = [
+    { label: 'Indonesian', value: 'indonesian' },
+    ...languageOptions
+      .filter((lng) => lng === 'arabic')
+      .map((lng) => ({
+        label: getLocaleNameByFullName(lng),
+        value: lng,
+      })),
+  ];
+
+  const customTafsir = [
+    {
+      id: 820,
+      name: 'Tafsir Ringkas Kemenag',
+      authorName: 'Kementrian Agama Republik Indonesia',
+      slug: 'id-tafsir-ringkas-kemenag',
+      languageName: 'indonesian',
+      translatedName: {
+        name: 'Tafsir Ringkas Kemenag',
+        languageName: 'indonesian',
+      },
+    },
+    {
+      id: 821,
+      name: 'Tafsir Tahlili',
+      authorName: 'Kementrian Agama Republik Indonesia',
+      slug: 'id-tafsir-tahlili',
+      languageName: 'indonesian',
+      translatedName: {
+        name: 'Tafsir Tahlili',
+        languageName: 'indonesian',
+      },
+    },
+  ];
+
   return (
     <SpinnerContainer isLoading={isLoading}>
       <div className={styles.tafsirSelectionContainer}>
@@ -40,14 +75,11 @@ const LanguageAndTafsirSelection = ({
           size={SelectSize.Small}
           id="lang-selection"
           name="lang-selection"
-          options={languageOptions.map((lng) => ({
-            label: getLocaleNameByFullName(lng),
-            value: lng,
-          }))}
+          options={options}
           onChange={onSelectLanguage}
           value={selectedLanguage}
         />
-        {data.tafsirs
+        {[...data.tafsirs, ...customTafsir]
           .filter(
             (tafsir) =>
               tafsir.languageName === selectedLanguage ||

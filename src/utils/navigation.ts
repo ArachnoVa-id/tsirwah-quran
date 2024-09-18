@@ -123,6 +123,22 @@ export const getVerseSelectedTafsirNavigationUrl = (
   tafsirId: number | string,
 ): string => `/${chapterId}:${verseNumber}/tafsirs/${tafsirId}`;
 
+export const getIndonesianVerseSelectedTafsirNavigationUrl = async (
+  chapterId: string | number,
+  verseNumber: number,
+): Promise<string> => {
+  const quranApiUrl = `https://api.quran.com/api/v4/verses/by_key/${chapterId}:${verseNumber}`;
+  const quranApiResponse = await fetch(quranApiUrl);
+  if (!quranApiResponse.ok) {
+    throw new Error('Error fetching verse from Quran.com API');
+  }
+  const quranApiData = await quranApiResponse.json();
+  const verseId = quranApiData.id;
+
+  // API call to Kemenag using the verseId from the first API
+  return `https://web-api.qurankemenag.net/quran-tafsir/${verseId}`;
+};
+
 /**
  * Get the href link to selected tafsir for Ayah.
  *
