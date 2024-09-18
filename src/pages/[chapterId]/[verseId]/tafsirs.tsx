@@ -116,7 +116,7 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     const chapterData = getChapterData(chaptersData, chapterIdOrSlug);
     const { quranFont, mushafLines } = getQuranReaderStylesInitialState(locale);
 
-    const tafsirContentUrl = makeTafsirContentUrl(
+    const tafsirContentUrl = await makeTafsirContentUrl(
       getTafsirsInitialState(locale).selectedTafsirs[0],
       makeVerseKey(Number(chapterIdOrSlug), Number(verseId)),
       {
