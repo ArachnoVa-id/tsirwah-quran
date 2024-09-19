@@ -29,12 +29,27 @@ export const isValidTranslationsQueryParamValue = (value: string): boolean => {
   return isValid;
 };
 
-export const isValidTranslationsQueryParamValueWithExistingKey = (
+const getAvailableTranslations = async (): Promise<AvailableTranslation[]> => {
+  const res = await fetch('https://api.quran.com/api/v4/resources/translations');
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch translations');
+  }
+
+  const data = await res.json();
+
+  return data.translations;
+};
+
+export const isValidTranslationsQueryParamValueWithExistingKey = async (
   value: string,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   translationsData?: AvailableTranslation[],
-): boolean => {
+): Promise<boolean> => {
+  const translations: AvailableTranslation[] = await getAvailableTranslations();
   const translationIds = value === '' ? [] : value.split(',');
-  const translationsDataIds = translationsData?.map((translation) => translation.id);
+  const translationsDataIds = translations?.map((translation) => translation.id);
+  console.log('translationsDataIds', translationsDataIds);
   const allIdsExist = translationIds.every((id) => translationsDataIds.includes(Number(id)));
   const isValidValue = isValidTranslationsQueryParamValue(value);
 

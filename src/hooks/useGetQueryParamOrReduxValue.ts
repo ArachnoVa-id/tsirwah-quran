@@ -178,7 +178,7 @@ export const QUERY_PARAMS_DATA = {
     queryParamValueType: QueryParamValueType.Number,
     isValidQueryParam: (val) => isValidVideoIdQueryParamValue(val),
   },
-} as QueryParamsData;
+} as unknown as QueryParamsData;
 
 export const getQueryParamsData = () => {
   return QUERY_PARAMS_DATA;
