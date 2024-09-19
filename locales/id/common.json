@@ -6,17 +6,17 @@
     "auth-onboarding": {
       "data-sync": {
         "action": "Lanjut",
-        "description": "Baik Anda menggunakan Quran.com di ponsel ataupun laptop, Penanda Anda, ayat yang terakhir dibaca, dan preferensi Anda akan tersedia",
+        "description": "Baik Anda menggunakan Tsirwah Quran di ponsel ataupun laptop, Penanda Anda, ayat yang terakhir dibaca, dan preferensi Anda akan tersedia",
         "title": "Data Anda akan disinkronkan <br></br> di seluruh perangkat"
       },
       "feedback": {
         "action": "OK saya mengerti",
-        "description": "Terima kasih telah menggunakan Quran.com dan silakan beri tanggapan Anda di <link> feedback.quran.com </link>",
+        "description": "Terima kasih telah menggunakan Tsirwah Quran dan silakan beri tanggapan Anda di <link> feedback.Tsirwah Quran </link>",
         "title": "Kami ingin tahu pendapat Anda"
       },
       "quran-foundation-link": {
         "action": "Berikutnya",
-        "description": "Gunakan login Quran.com Anda untuk akses ke QuranReflect.com — sebuah komunitas refleksi Al-Qur'an global yang bertumbuh pesat.",
+        "description": "Gunakan login Tsirwah Quran Anda untuk akses ke QuranReflect.com — sebuah komunitas refleksi Al-Qur'an global yang bertumbuh pesat.",
         "title": "Gunakan akun Anda di seluruh aplikasi Quran.Foundation!"
       },
       "quran-growth-journey": {
@@ -26,7 +26,7 @@
       },
       "welcome": {
         "action": "Lihat apa yang baru",
-        "title": "Selamat datang di Quran.com <br></br> Akun Pengguna"
+        "title": "Selamat datang di Tsirwah Quran <br></br> Akun Pengguna"
       }
     },
     "collections-announcement": {
@@ -111,7 +111,7 @@
   "community": {
     "cta": "Bergabunglah dengan Komunitas",
     "header": "Bergabunglah dengan Komunitas QDC pembangun dan teknologi Muslim.",
-    "sub-header": "Daftar ke Quran.com Discord untuk berpartisipasi dan berkolaborasi dengan komunitas terkemuka yang membangun teknologi Islami.",
+    "sub-header": "Daftar ke Tsirwah Quran Discord untuk berpartisipasi dan berkolaborasi dengan komunitas terkemuka yang membangun teknologi Islami.",
     "title": "Komunitas"
   },
   "complete-sign-up": "Lengkapi pendaftaran Anda",
@@ -169,7 +169,7 @@
     "text_uthmani": "Usmani"
   },
   "footer": {
-    "description": "Quran.com adalah Sadaqah Jariyah. Kami berharap setiap orang dapat membaca, mempelajari, dan memahami Al-Quran dengan lebih mudah. Al-Qur'an Mulia mempunyai banyak nama di antaranya Al-Qur'an Al-Karim, Al-Kitab, Al-Furqan, Al-Maw'itha, Al-Zikir, dan Al-Nur.",
+    "description": "Tsirwah Quran adalah Sadaqah Jariyah. Kami berharap setiap orang dapat membaca, mempelajari, dan memahami Al-Quran dengan lebih mudah. Al-Qur'an Mulia mempunyai banyak nama di antaranya Al-Qur'an Al-Karim, Al-Kitab, Al-Furqan, Al-Maw'itha, Al-Zikir, dan Al-Nur.",
     "hiring": "Kami sedang merekrut! Bergabunglah dengan tim QuranFoundation dan berkontribusi pada misi kami. <link> Daftar sekarang! </link>",
     "rights": "Hak Cipta Terlindungi",
     "title": "Baca, pelajari, dan pahami Al-Qur'an Mulia."
@@ -188,7 +188,7 @@
     "title": "Menyumbang di hari-hari terbaik!"
   },
   "fundraising": {
-    "description": "Donasi bulanan membantu kami meningkatkan Quran.com dan melanggengkan operasional sehingga kami tidak terlalu fokus pada penggalangan dana tetapi lebih pada penciptaan dampak.",
+    "description": "Donasi bulanan membantu kami meningkatkan Tsirwah Quran dan melanggengkan operasional sehingga kami tidak terlalu fokus pada penggalangan dana tetapi lebih pada penciptaan dampak.",
     "title": "Menjadi Donatur Bulanan"
   },
   "help": "Bantuan",
@@ -260,7 +260,7 @@
   "product-updates": "Pengkinian Produk",
   "profile": "Profil",
   "q-reflect": "QuranReflect",
-  "quran-com": "Quran.com",
+  "quran-com": "Tsirwah Quran",
   "quran-radio": "Radio Qur'an",
   "reading-history": "Riwayat membaca",
   "reading-preference": {
@@ -352,7 +352,7 @@
   },
   "theme": "Tema",
   "themes": {
-    "auto": "Otomatis",
+    "auto": "Auto",
     "dark": "Gelap",
     "light": "Terang",
     "sepia": "Sepia",

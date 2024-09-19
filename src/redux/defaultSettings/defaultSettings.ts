@@ -30,7 +30,7 @@ export interface DefaultSettings {
 }
 
 // Tafsir Ibn Kathir in English
-export const DEFAULT_TAFSIRS = ['ar-tafsir-ibn-kathir'];
+export const DEFAULT_TAFSIRS = ['id-tafsir-ringkas-kemenag'];
 
 export const DEFAULT_RECITER = {
   id: 7,
@@ -44,7 +44,7 @@ const TAFSIRS_INITIAL_STATE: TafsirsSettings = {
   isUsingDefaultTafsirs: true,
 };
 
-export const DEFAULT_TRANSLATIONS = [33]; // Dr. Mustafa Khattab, the Clear Quran
+export const DEFAULT_TRANSLATIONS = [33];
 
 const TRANSLATIONS_INITIAL_STATE: TranslationsSettings = {
   selectedTranslations: DEFAULT_TRANSLATIONS,
@@ -57,7 +57,7 @@ const QURAN_READER_STYLES_INITIAL_STATE: QuranReaderStyles = {
   quranTextFontScale: 13,
   translationFontScale: 3,
   wordByWordFontScale: 3,
-  quranFont: QuranFont.MadaniV2,
+  quranFont: QuranFont.MadaniV1,
   mushafLines: MushafLines.FifteenLines,
   isUsingDefaultFont: true,
 };

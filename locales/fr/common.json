@@ -6,17 +6,17 @@
     "auth-onboarding": {
       "data-sync": {
         "action": "Prochain",
-        "description": "Que vous utilisiez Quran.com sur votre téléphone ou votre ordinateur portable, vos signets, les derniers versets lus et vos préférences seront disponibles",
-        "title": "Vos données seront synchronisées <br><\/br> sur tous les appareils"
+        "description": "Que vous utilisiez Tsirwah Quran sur votre téléphone ou votre ordinateur portable, vos signets, les derniers versets lus et vos préférences seront disponibles",
+        "title": "Vos données seront synchronisées <br></br> sur tous les appareils"
       },
       "feedback": {
         "action": "OK, j'ai compris",
-        "description": "Merci d'utiliser Quran.com et nous serions heureux d'entendre vos commentaires sur <link> feedback.quran.com <\/link>",
+        "description": "Merci d'utiliser Tsirwah Quran et nous serions heureux d'entendre vos commentaires sur <link> feedback.Tsirwah Quran </link>",
         "title": "Nous voulons entendre vos pensées"
       },
       "quran-foundation-link": {
         "action": "Suivant",
-        "description": "Utilisez votre connexion Quran.com pour accéder à QuranReflect.com - une communauté mondiale florissante engagée dans la réflexion coranique.",
+        "description": "Utilisez votre connexion Tsirwah Quran pour accéder à QuranReflect.com - une communauté mondiale florissante engagée dans la réflexion coranique.",
         "title": "Utilisez votre compte sur toutes les applications Quran.Foundation !"
       },
       "quran-growth-journey": {
@@ -26,12 +26,12 @@
       },
       "welcome": {
         "action": "Regardez ce qu'il y a de nouveau",
-        "title": "Bienvenue sur Quran.com <br><\/br> Compte utilisateur"
+        "title": "Bienvenue sur Tsirwah Quran <br></br> Compte utilisateur"
       }
     },
     "collections-announcement": {
       "slide-1": {
-        "description": "Nous sommes très heureux de vous annoncer que vous pouvez désormais regrouper les signets sous \"collections\" ! <br\/> <br\/> <li> Ajoutez autant de collections que vous le souhaitez <\/li> <li> Ajoutez un signet à une ou plusieurs collections <\/li> <li> Et plus encore ! <\/li>",
+        "description": "Nous sommes très heureux de vous annoncer que vous pouvez désormais regrouper les signets sous \"collections\" ! <br/> <br/> <li> Ajoutez autant de collections que vous le souhaitez </li> <li> Ajoutez un signet à une ou plusieurs collections </li> <li> Et plus encore ! </li>",
         "title": "Les collections de marque-pages sont là !"
       }
     }
@@ -52,8 +52,8 @@
       "title": "Défilement automatique"
     },
     "displaying": "Affichage",
-    "exp-tip": "<span>Modifier le contenu affiché sous<\/span><br><\/br> <boldSpan>Paramètres<\/boldSpan> > <boldSpan>Mot par mot<\/boldSpan>",
-    "exp-tip-no-select": "<span>Cochez l'option d'affichage de l'info-bulle et sélectionnez l'option <br><\/br> Traduction et\/ou Translittération<\/span><br><\/br><span> sous <\/span><boldSpan>Paramètres<\/boldSpan> > <boldSpan>mot par mot<\/boldSpan><span>, pour<\/span><br><\/br> <span>activer cette fonctionnalité.<\/span>",
+    "exp-tip": "<span>Modifier le contenu affiché sous</span><br></br> <boldSpan>Paramètres</boldSpan> > <boldSpan>Mot par mot</boldSpan>",
+    "exp-tip-no-select": "<span>Cochez l'option d'affichage de l'info-bulle et sélectionnez l'option <br></br> Traduction et/ou Translittération</span><br></br><span> sous </span><boldSpan>Paramètres</boldSpan> > <boldSpan>mot par mot</boldSpan><span>, pour</span><br></br> <span>activer cette fonctionnalité.</span>",
     "experience": "Expérience",
     "play": "Lire le son",
     "playback-normal": "Normal",
@@ -85,7 +85,7 @@
       "verses-range": "Gamme de vers",
       "volume-control": "Contrôle du volume"
     },
-    "repeat-moved": "Les paramètres de répétition ont été déplacés vers le lecteur audio. Cliquez sur l' <0> <\/0> pour y accéder",
+    "repeat-moved": "Les paramètres de répétition ont été déplacés vers le lecteur audio. Cliquez sur l' <0> </0> pour y accéder",
     "select-reciter": "Sélectionnez le récitant",
     "speed": "Vitesse",
     "title": "l'audio"
@@ -111,14 +111,14 @@
   "community": {
     "cta": "Rejoindre la communauté",
     "header": "Rejoignez la communauté QDC de constructeurs et de technologues musulmans.",
-    "sub-header": "Inscrivez-vous sur Quran.com Discord pour participer et collaborer avec la principale technologie islamique de construction de communauté.",
+    "sub-header": "Inscrivez-vous sur Tsirwah Quran Discord pour participer et collaborer avec la principale technologie islamique de construction de communauté.",
     "title": "Communauté"
   },
   "complete-sign-up": "Complétez votre inscription",
   "consents": {
     "communication": {
-      "body": "🚀 Boostez vos progrès grâce à des notifications <boldSpan> personnalisées <\/boldSpan> sur la progression de votre objectif, le maintien de séquences et l'amélioration de votre utilisation de nos fonctionnalités actuelles. <br><\/br> <br><\/br> Pouvons-nous vous tenir au courant par e-mail et par d'autres canaux ? Vous avez le contrôle – n'hésitez pas à ajuster ces préférences à tout moment dans les paramètres de votre compte. <br><\/br> <br><\/br> Sélectionnez simplement « Autoriser » pour <boldSpan> rappels inspirants <\/boldSpan> ou « Pas maintenant » pour refuser.",
-      "header": "Nous serions ravis de vous aider à rester <boldSpan> engagé et cohérent <\/boldSpan> dans votre parcours de croissance du Coran ! 📖🌟"
+      "body": "🚀 Boostez vos progrès grâce à des notifications <boldSpan> personnalisées </boldSpan> sur la progression de votre objectif, le maintien de séquences et l'amélioration de votre utilisation de nos fonctionnalités actuelles. <br></br> <br></br> Pouvons-nous vous tenir au courant par e-mail et par d'autres canaux ? Vous avez le contrôle – n'hésitez pas à ajuster ces préférences à tout moment dans les paramètres de votre compte. <br></br> <br></br> Sélectionnez simplement « Autoriser » pour <boldSpan> rappels inspirants </boldSpan> ou « Pas maintenant » pour refuser.",
+      "header": "Nous serions ravis de vous aider à rester <boldSpan> engagé et cohérent </boldSpan> dans votre parcours de croissance du Coran ! 📖🌟"
     }
   },
   "continue": "Continuer",
@@ -139,7 +139,7 @@
   "edit": "Modifier",
   "email-verification": {
     "check-spam": "Vous n'avez pas reçu l'e-mail de vérification ? Vérifiez votre boîte de réception de spam",
-    "email-sent": "Nous venons d'envoyer un e-mail à <strong> {{email}} <\/strong>",
+    "email-sent": "Nous venons d'envoyer un e-mail à <strong> {{email}} </strong>",
     "email-verification": "Vérification de l'E-mail",
     "resend-email": "Ré-envoyer l'email",
     "resend-email-in": "Renvoyer l'e-mail de vérification dans {{remainingTime}} s...",
@@ -164,13 +164,13 @@
     "qpc_uthmani_hafs": "QPC Uthmani Hafs",
     "quran-font": "Police du Coran",
     "tajweed": "Tajweed",
-    "tajweed-desc": "La police Tajweed montre un Mushaf de couleur Tajweed. Vous pouvez en savoir plus sur les règles de couleur Tajweed <0> ici <\/0>",
+    "tajweed-desc": "La police Tajweed montre un Mushaf de couleur Tajweed. Vous pouvez en savoir plus sur les règles de couleur Tajweed <0> ici </0>",
     "text_indopak": "IndoPak",
     "text_uthmani": "Uthmani"
   },
   "footer": {
-    "description": "Quran.com est une Sadaqah Jariyah. Nous espérons faciliter la lecture, l'étude et l'apprentissage du Noble Coran pour tous. Le Noble Coran a de nombreux noms dont Al-Quran Al-Kareem, Al-Ketab, Al-Furqan, Al-Maw'itha, Al-Thikr et Al-Noor.",
-    "hiring": "Nous embauchons! Rejoignez l'équipe de QuranFoundation et contribuez à notre mission. <link> Postulez maintenant ! <\/link>",
+    "description": "Tsirwah Quran est une Sadaqah Jariyah. Nous espérons faciliter la lecture, l'étude et l'apprentissage du Noble Coran pour tous. Le Noble Coran a de nombreux noms dont Al-Quran Al-Kareem, Al-Ketab, Al-Furqan, Al-Maw'itha, Al-Thikr et Al-Noor.",
+    "hiring": "Nous embauchons! Rejoignez l'équipe de QuranFoundation et contribuez à notre mission. <link> Postulez maintenant ! </link>",
     "rights": "Tous les droits sont réservés",
     "title": "Lisez, étudiez et apprenez Le Noble Coran."
   },
@@ -188,7 +188,7 @@
     "title": "Donnez pendant les meilleurs jours !"
   },
   "fundraising": {
-    "description": "Les dons mensuels nous aident à améliorer Quran.com et à maintenir nos opérations afin que nous nous concentrions moins sur la collecte de fonds et davantage sur la création d'un impact.",
+    "description": "Les dons mensuels nous aident à améliorer Tsirwah Quran et à maintenir nos opérations afin que nous nous concentrions moins sur la collecte de fonds et davantage sur la création d'un impact.",
     "title": "Devenez un donateur mensuel"
   },
   "help": "Aider",
@@ -269,7 +269,7 @@
   },
   "recitation": "Récitation",
   "reciter": "Récitant",
-  "reciter-summary": "Récitant mot à mot : <span> {{reciterName}} <\/span> . Cliquez sur un mot pour écouter sa récitation.",
+  "reciter-summary": "Récitant mot à mot : <span> {{reciterName}} </span> . Cliquez sur un mot pour écouter sa récitation.",
   "reciters": "Récitants",
   "reflect": "Réfléchir",
   "reflections": "Réflexions",
@@ -357,7 +357,7 @@
     "light": "Léger",
     "sepia": "Sépia",
     "system": "Système",
-    "system-desc": "Le thème du système s'adapte automatiquement à vos paramètres de mode clair\/sombre"
+    "system-desc": "Le thème du système s'adapte automatiquement à vos paramètres de mode clair/sombre"
   },
   "to": "À",
   "tooltip": "Info-bulle",
@@ -391,7 +391,7 @@
     "voice-search-powered-by": "Recherche vocale optimisée par"
   },
   "wbw": "Mot par mot",
-  "wbw-lang-summary": "Source de la traduction mot à mot : <link> {{source}} <\/link> . Cette source est indépendante de la sélection de traduction verset.",
+  "wbw-lang-summary": "Source de la traduction mot à mot : <link> {{source}} </link> . Cette source est indépendante de la sélection de traduction verset.",
   "wbw-trans-lang": "Langage mot à mot",
   "wbw-translation": "Traduction mot à mot",
   "wbw-transliteration": "Translittération mot à mot",

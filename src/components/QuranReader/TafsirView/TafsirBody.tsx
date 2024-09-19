@@ -254,9 +254,9 @@ const TafsirBody = ({
 
       if (data?.data) {
         if (selectedTafsirIdOrSlug === 'id-tafsir-tahlili') {
-          text = data.data.tafsir.tahlili;
+          text = data.data.tafsir.tahlili.replace(/\n/g, '<br></br>');
         } else if (selectedTafsirIdOrSlug === 'id-tafsir-ringkas-kemenag') {
-          text = data.data.tafsir.wajiz;
+          text = data.data.tafsir.wajiz.replace(/\n/g, '<br></br>');
         }
         languageId = 67;
       }

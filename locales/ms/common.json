@@ -6,17 +6,17 @@
     "auth-onboarding": {
       "data-sync": {
         "action": "Seterusnya",
-        "description": "Sama ada anda menggunakan Quran.com pada telefon atau komputer riba anda, penanda halaman anda, ayat terakhir dibaca dan pilihan anda akan tersedia",
+        "description": "Sama ada anda menggunakan Tsirwah Quran pada telefon atau komputer riba anda, penanda halaman anda, ayat terakhir dibaca dan pilihan anda akan tersedia",
         "title": "Data anda akan diselenggarakan <br></br> merentas peranti"
       },
       "feedback": {
         "action": "Okay, faham",
-        "description": "Terima kasih kerana menggunakan Quran.com dan sila beri maklum balas anda  <link> feedback.quran.com </link>",
+        "description": "Terima kasih kerana menggunakan Tsirwah Quran dan sila beri maklum balas anda  <link> feedback.Tsirwah Quran </link>",
         "title": "Kami mengalukan pendapat anda"
       },
       "quran-foundation-link": {
         "action": "Seterusnya",
-        "description": "Gunakan log masuk Quran.com anda untuk akses kepada QuranReflect.com — komuniti global yang berkembang maju yang terlibat dalam refleksi al-Quran.",
+        "description": "Gunakan log masuk Tsirwah Quran anda untuk akses kepada QuranReflect.com — komuniti global yang berkembang maju yang terlibat dalam refleksi al-Quran.",
         "title": "Gunakan akaun anda merentas aplikasi Quran.Foundation!"
       },
       "quran-growth-journey": {
@@ -26,7 +26,7 @@
       },
       "welcome": {
         "action": "Lihat apa yang baharu",
-        "title": "Selamat datang ke Akaun Pengguna Quran.com <br></br>"
+        "title": "Selamat datang ke Akaun Pengguna Tsirwah Quran <br></br>"
       }
     },
     "collections-announcement": {
@@ -111,7 +111,7 @@
   "community": {
     "cta": "Sertai Komuniti",
     "header": "Sertai Komuniti Muslim QDC pembina dan ahli teknologi.",
-    "sub-header": "Daftar untuk Discord Quran.com untuk mengambil bahagian dan bekerjasama dengan  pembinaan komuniti teknologi Islam.",
+    "sub-header": "Daftar untuk Discord Tsirwah Quran untuk mengambil bahagian dan bekerjasama dengan  pembinaan komuniti teknologi Islam.",
     "title": "Komuniti"
   },
   "complete-sign-up": "Lengkapkan pendaftaran anda",
@@ -169,7 +169,7 @@
     "text_uthmani": "Uthmani"
   },
   "footer": {
-    "description": "Quran.com adalah Sadaqah Jariyah. Kami berharap agar kami dapat memudahkan semua orang dapat membaca, mempelajari dan memahami erti Al-Quran. Al-Quran yang mulia mempunyai banyak nama antaranya Al-Quran Al-Kareem, Al-Kitab, Al-Furqan, Al-Maw'itha, Al-Zikir, dan Al-Nur.",
+    "description": "Tsirwah Quran adalah Sadaqah Jariyah. Kami berharap agar kami dapat memudahkan semua orang dapat membaca, mempelajari dan memahami erti Al-Quran. Al-Quran yang mulia mempunyai banyak nama antaranya Al-Quran Al-Kareem, Al-Kitab, Al-Furqan, Al-Maw'itha, Al-Zikir, dan Al-Nur.",
     "hiring": "Kami ada jawatan kosong untuk di penuhi! Sertai pasukan QuranFoundation dan menyumbang kepada misi kami. <link> Mohon sekarang! </link>",
     "rights": "Hak cipta terpelihara",
     "title": "Baca, kaji dan pelajari Al-Quran."
@@ -188,7 +188,7 @@
     "title": "Berikan pada hari-hari terbaik!"
   },
   "fundraising": {
-    "description": "Derma bulanan membantu kami menambah baik Quran.com dan mengekalkan operasi supaya kami kurang menumpukan pada pengumpulan dana dan lebih kepada mencipta impak.",
+    "description": "Derma bulanan membantu kami menambah baik Tsirwah Quran dan mengekalkan operasi supaya kami kurang menumpukan pada pengumpulan dana dan lebih kepada mencipta impak.",
     "title": "Jadilah Penderma Bulanan"
   },
   "help": "Bantuan",
@@ -260,7 +260,7 @@
   "product-updates": "Kemas kini produk",
   "profile": "Profil",
   "q-reflect": "QuranReflect",
-  "quran-com": "Quran.com",
+  "quran-com": "Tsirwah Quran",
   "quran-radio": "Radio Al-Quran",
   "reading-history": "Sejarah Pembacaan",
   "reading-preference": {
