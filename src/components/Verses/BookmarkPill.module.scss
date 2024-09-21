@@ -8,7 +8,11 @@
 
 .linkButtonContainer {
   font-weight: var(--font-weight-semibold);
-  text-decoration: underline;
+  // text-decoration: underline;
+  background: #02989a;
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .closeIconContainer {

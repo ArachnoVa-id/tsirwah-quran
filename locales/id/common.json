@@ -93,7 +93,7 @@
   "ayah": "Ayat",
   "ayahs": "Ayat",
   "beta": "Beta",
-  "bookmark": "Tandai",
+  "bookmark": "Ditandai",
   "bookmarked": "Ditandai",
   "both": "Keduanya",
   "cancel": "Batal",
@@ -171,7 +171,7 @@
   "footer": {
     "description": "Tsirwah Quran adalah Sadaqah Jariyah. Kami berharap setiap orang dapat membaca, mempelajari, dan memahami Al-Quran dengan lebih mudah. Al-Qur'an Mulia mempunyai banyak nama di antaranya Al-Qur'an Al-Karim, Al-Kitab, Al-Furqan, Al-Maw'itha, Al-Zikir, dan Al-Nur.",
     "hiring": "Kami sedang merekrut! Bergabunglah dengan tim QuranFoundation dan berkontribusi pada misi kami. <link> Daftar sekarang! </link>",
-    "rights": "Hak Cipta Terlindungi",
+    "rights": "Hak Cipta Dilindungi",
     "title": "Baca, pelajari, dan pahami Al-Qur'an Mulia."
   },
   "form": {
@@ -193,7 +193,7 @@
   },
   "help": "Bantuan",
   "hizb": "Hizb",
-  "home": "Halaman Utama",
+  "home": "Beranda",
   "hours": "Jam",
   "inline": "Di bawah ayat",
   "input": {
@@ -276,7 +276,7 @@
   "remove": "Keluarkan",
   "rename": "Ganti nama",
   "retry": "Coba Lagi",
-  "revelation_order": "Urutan Wahyu",
+  "revelation_order": "Sekuensial",
   "rub": "Rub el Hizb",
   "save": "Simpan",
   "save-to-collection": "Simpan ke Koleksi",
@@ -328,9 +328,9 @@
   },
   "sitemap": "Peta situs",
   "sort": {
-    "ascending": "menaik",
-    "by": "Sortir dengan",
-    "descending": "Menurun"
+    "ascending": "",
+    "by": "",
+    "descending": ""
   },
   "style": "Gaya",
   "submit": "Kirim",

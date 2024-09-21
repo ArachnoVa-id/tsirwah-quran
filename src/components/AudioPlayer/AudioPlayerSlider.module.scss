@@ -1,12 +1,13 @@
-@use "src/styles/breakpoints";
-@use "src/styles/constants";
+@use 'src/styles/breakpoints';
+@use 'src/styles/constants';
 
 .container {
   margin-block: var(--spacing-xxsmall) calc(-1 * var(--spacing-xsmall));
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: var(--color-text-faded);
+  // color: var(--color-text-faded);
+  color: white;
   font-size: var(--font-size-xsmall);
   min-height: var(
     --font-size-xsmall

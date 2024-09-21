@@ -13,7 +13,7 @@ const HomePageHero = () => {
   return (
     <div className={styles.outerContainer}>
       <Head>
-        <link rel="preload" as="image" href="/images/tsirwah-bg.png" />
+        <link rel="preload" as="image" href="/images/background.jpg" />
       </Head>
       <div className={styles.backgroundImage} />
       <div data-theme="light">

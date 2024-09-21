@@ -1,6 +1,6 @@
-@use "src/styles/breakpoints";
-@use "src/styles/utility";
-@use "src/styles/constants";
+@use 'src/styles/breakpoints';
+@use 'src/styles/utility';
+@use 'src/styles/constants';
 
 .flowItem {
   @include utility.pageContainer();
@@ -42,6 +42,12 @@
   }
 }
 
+.footerContainer {
+  display: absolute;
+  right: 0;
+  top: 0;
+}
+
 .title {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
@@ -53,6 +59,11 @@
     fill: var(--color-text-default);
   }
   margin-block-end: var(--spacing-xxsmall);
+}
+.themeContainer {
+  display: absolute;
+  right: 0;
+  top: 0;
 }
 .headingContainer {
   display: flex;

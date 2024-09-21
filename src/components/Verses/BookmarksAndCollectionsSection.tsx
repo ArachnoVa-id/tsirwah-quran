@@ -4,12 +4,13 @@ import classNames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
 
 import CollectionList from '../Collection/CollectionList/CollectionList';
+import Switch from '../dls/Switch/Switch';
 
 import BookmarkedVersesList from './BookmarkedVersesList';
 import styles from './BookmarksAndQuickLinks.module.scss';
 import RecentReadingSessionsList from './RecentReadingSessionsList';
 
-import Tabs from '@/dls/Tabs/Tabs';
+// import Tabs from '@/dls/Tabs/Tabs';
 import { isLoggedIn } from '@/utils/auth/login';
 import { logValueChange } from '@/utils/eventLogger';
 
@@ -32,12 +33,12 @@ const BookmarksAndCollectionsSection: React.FC<Props> = ({ isHomepage = false })
   const tabs = [];
 
   if (isHomepage) {
-    tabs.push({ title: t('recently-read'), value: View.ReadingSessions });
+    tabs.push({ name: t('recently-read'), value: View.ReadingSessions });
   }
-  tabs.push({ title: t('tab.bookmarks'), value: View.Bookmarks });
+  tabs.push({ name: t('tab.bookmarks'), value: View.Bookmarks });
 
   if (isLoggedIn()) {
-    tabs.push({ title: t('collection:collections'), value: View.Collections });
+    tabs.push({ name: t('collection:collections'), value: View.Collections });
   }
 
   const onTabSelected = (newTab) => {
@@ -48,7 +49,7 @@ const BookmarksAndCollectionsSection: React.FC<Props> = ({ isHomepage = false })
   return (
     <div>
       <div className={styles.tabsContainer}>
-        <Tabs tabs={tabs} selected={selectedTab} onSelect={onTabSelected} />
+        <Switch items={tabs} selected={selectedTab} onSelect={onTabSelected} />
       </div>
       <div className={classNames(styles.contentContainer, styles.tabsContainer)}>
         {selectedTab === View.ReadingSessions && <RecentReadingSessionsList />}

@@ -49,7 +49,6 @@ export const isValidTranslationsQueryParamValueWithExistingKey = async (
   const translations: AvailableTranslation[] = await getAvailableTranslations();
   const translationIds = value === '' ? [] : value.split(',');
   const translationsDataIds = translations?.map((translation) => translation.id);
-  console.log('translationsDataIds', translationsDataIds);
   const allIdsExist = translationIds.every((id) => translationsDataIds.includes(Number(id)));
   const isValidValue = isValidTranslationsQueryParamValue(value);
 

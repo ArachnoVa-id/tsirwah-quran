@@ -4,6 +4,7 @@ import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 
 import styles from './Footer.module.scss';
+// import FooterThemeSwitcher from './FooterThemeSwitcher';
 
 // import Link, { LinkVariant } from '@/dls/Link/Link';
 // import QuranTextLogo from '@/icons/quran-text-logo.svg';
@@ -28,12 +29,15 @@ const TitleAndDescription = () => {
             quality={100}
           />
         </div>
-        <div className={styles.title}>Alquran yang Mulia - Tsirwah Quran</div>
+        {/* <div className={styles.themeContainer}>
+          <FooterThemeSwitcher />
+        </div> */}
+        {/* <div className={styles.title}>Alquran yang Mulia - Tsirwah Quran</div> */}
       </div>
-      <p className={styles.description}>
+      {/* <p className={styles.description}>
         Sesungguhnya Allah mengangkat derajat seseorang dengan kitab ini (Alquran) dan merendahkan
         yang lain dengan kitab ini.
-      </p>
+      </p> */}
       {/* <div className={styles.hiringAnnouncementContainer}>
         <Trans
           components={{

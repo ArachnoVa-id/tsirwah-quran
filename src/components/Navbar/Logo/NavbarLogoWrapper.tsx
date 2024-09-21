@@ -8,18 +8,13 @@ import Link from '@/dls/Link/Link';
 // import QuranTextLogo from '@/icons/quran-text-logo.svg';
 
 const NavbarLogoWrapper = () => {
-  // const { t } = useTranslation('common');
   const router = useRouter();
+  const isHomePage = router.pathname === '/';
+
   return (
-    <Link href="/" className={styles.logoWrapper} title="tsirwah-quran">
-      {/* <QuranTextLogo /> */}
-      {/* <TsirwahLogo /> */}
+    <Link href="/" className={`${styles.logoWrapper}`} title="tsirwah-quran">
       <Image
-        src={
-          router.pathname === '/'
-            ? '/images/logo/tsirwah-logo.png'
-            : '/images/logo/tsirwah-logo-white.png'
-        }
+        src={isHomePage ? '/images/logo/tsirwah-logo.png' : '/icons/FaHome.svg'}
         alt="tsirwah-quran"
         width={120}
         height={40}
