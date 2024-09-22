@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
 import BookmarkAction from '../BookmarkAction';
-import NotesAction from '../Notes/NotesAction';
+// import NotesAction from '../Notes/NotesAction';
 import SaveToCollectionAction from '../SaveToCollectionAction';
 import VerseActionRepeatAudio from '../VerseActionRepeatAudio';
 
@@ -43,7 +43,7 @@ const OverflowVerseActionsMenuBody: React.FC<Props> = ({
 
   return selectedMenu === VerseActionsOverflowMenu.Main ? (
     <div>
-      {!isTranslationView && <NotesAction verse={verse} />}
+      {/* {!isTranslationView && <NotesAction verse={verse} />} */}
       {!isTranslationView && (
         <WordByWordVerseAction verse={verse} onActionTriggered={onActionTriggered} />
       )}
