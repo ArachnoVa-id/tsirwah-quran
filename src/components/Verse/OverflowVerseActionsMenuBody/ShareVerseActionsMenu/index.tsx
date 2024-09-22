@@ -5,6 +5,7 @@ import clipboardCopy from 'clipboard-copy';
 import useTranslation from 'next-translate/useTranslation';
 import { useSelector, shallowEqual } from 'react-redux';
 
+// eslint-disable-next-line import/no-cycle
 import VerseActionAdvancedCopy from '@/components/Verse/VerseActionAdvancedCopy';
 // import NewLabel from '@/dls/Badge/NewLabel';
 import PopoverMenu from '@/dls/PopoverMenu/PopoverMenu';

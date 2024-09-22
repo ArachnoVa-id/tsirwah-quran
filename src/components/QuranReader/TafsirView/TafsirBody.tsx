@@ -27,6 +27,8 @@ import { selectQuranReaderStyles } from '@/redux/slices/QuranReader/styles';
 import { selectTafsirs, setSelectedTafsirs } from '@/redux/slices/QuranReader/tafsirs';
 import Verse from '@/types/Verse';
 import { makeTafsirContentUrl, makeTafsirsUrl } from '@/utils/apiPaths';
+import { textToBlob } from '@/utils/blob';
+import copyText from '@/utils/copyText';
 import {
   logButtonClick,
   logEvent,
@@ -44,12 +46,13 @@ import {
   getSelectedTafsirLanguage,
   getTafsirsLanguageOptions,
 } from '@/utils/tafsir';
+import { getWindowOrigin } from '@/utils/url';
 import {
+  getVerseAndChapterNumbersFromKey,
   getVerseNumberFromKey,
   getFirstAndLastVerseKeys,
   makeVerseKey,
   isLastVerseOfSurah,
-  getVerseAndChapterNumbersFromKey,
 } from '@/utils/verse';
 import { fetcher } from 'src/api';
 import DataContext from 'src/contexts/DataContext';
@@ -95,6 +98,7 @@ const TafsirBody = ({
     initialTafsirIdOrSlug || userPreferredTafsirIds?.[0],
   );
   const [tafsirData, setTafsirData] = useState(null);
+  const [tafsirText, setTafsirText] = useState('');
 
   // if user opened tafsirBody via a url, we will have initialTafsirIdOrSlug
   // we need to set this `initialTafsirIdOrSlug` as a selectedTafsirIdOrSlug
@@ -217,6 +221,38 @@ const TafsirBody = ({
     fetchTafsirContent();
   }, [fetchTafsirContent]);
 
+  function wrapTextUthmani(verseData) {
+    let combinedText = '';
+
+    // Loop through each verse's words and concatenate the text_uthmani
+    // eslint-disable-next-line guard-for-in, no-restricted-syntax
+    for (const verseKey in verseData) {
+      const { words } = verseData[verseKey];
+
+      // eslint-disable-next-line no-loop-func
+      words.forEach((word) => {
+        combinedText += `${word.textUthmani} `;
+      });
+    }
+
+    return combinedText.trim(); // Trim to remove any trailing spaces
+  }
+
+  const copyTafsirText = async () => {
+    if (!tafsirText || !tafsirData) return;
+
+    const ayahText = wrapTextUthmani(tafsirData);
+    const origin = getWindowOrigin('id');
+    const [chapter, verse] = getVerseAndChapterNumbersFromKey(Object.keys(tafsirData)[0]);
+
+    const formattedTafsirText = tafsirText.replace(/<br><\/br>/g, '\n\n');
+
+    const textBlob = textToBlob(
+      `${ayahText}\n\n${formattedTafsirText}\n\n🔗 Selengkapnya: ${origin}/${chapter}:${verse}\n\n📲 Download Aplikasi Pesantren Digital disini: https://play.google.com/store/apps/details?id=com.wnapp.id1694615184829`,
+    );
+    copyText(Promise.resolve(textBlob));
+  };
+
   // Assuming `tafsirData` is stored in the component state
 
   const renderTafsir = useCallback(
@@ -260,6 +296,8 @@ const TafsirBody = ({
         }
         languageId = 67;
       }
+
+      setTafsirText(text);
 
       const langData = getLanguageDataById(languageId);
 
@@ -320,6 +358,9 @@ const TafsirBody = ({
           <div className={styles.separatorContainer}>
             <Separator />
           </div>
+          <button type="button" className={styles.salinButton} onClick={copyTafsirText}>
+            Salin Teks
+          </button>
           {!!text && (
             <TafsirText direction={langData.direction} languageCode={langData.code} text={text} />
           )}
@@ -332,6 +373,7 @@ const TafsirBody = ({
         </div>
       );
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [chaptersData, lang, scrollToTop, selectedChapterId, selectedTafsirIdOrSlug, t, tafsirData],
   );
 

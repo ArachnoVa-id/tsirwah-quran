@@ -1,5 +1,9 @@
+// eslint-disable-next-line import/no-cycle
+
 import { MushafLines } from '@/types/QuranReader';
 import { getMushafId } from '@/utils/api';
+import { getWindowOrigin } from '@/utils/url';
+import { getVerseAndChapterNumbersFromKey } from '@/utils/verse';
 import { getAdvancedCopyRawResult } from 'src/api';
 
 /**
@@ -25,6 +29,9 @@ const getTextToCopy = ({
     fromVerse = rangeStartVerse;
     toVerse = rangeEndVerse;
   }
+  // copy the link
+  const origin = getWindowOrigin('id');
+  const [chapter, verse] = getVerseAndChapterNumbersFromKey(verseKey);
   // filter the translations
   const toBeCopiedTranslations = Object.keys(translations).filter(
     (translationId) => translations[translationId].shouldBeCopied === true,
@@ -43,7 +50,7 @@ const getTextToCopy = ({
     }), // only include the fonts when at least 1 font has been selected.
   }).then(
     (res) =>
-      `${res.result} Mari tingkatkan pengalaman anda dengan mengunduh Tsirwah App di https://play.google.com/store/apps/details?id=com.wnapp.id1694615184829`,
+      `${res.result}🔗 Selengkapnya: ${origin}/${chapter}/${verse}\n\n📲 Download Aplikasi Pesantren Digital disini: https://play.google.com/store/apps/details?id=com.wnapp.id1694615184829`,
   );
 };
 

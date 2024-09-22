@@ -1,6 +1,6 @@
-@use "src/styles/constants";
-@use "src/styles/utility";
-@use "src/styles/breakpoints";
+@use 'src/styles/constants';
+@use 'src/styles/utility';
+@use 'src/styles/breakpoints';
 
 $container-max-width: calc(23 * var(--spacing-mega));
 
@@ -40,7 +40,7 @@ $container-max-width: calc(23 * var(--spacing-mega));
     line-height: normal;
   }
   br {
-    content: "";
+    content: '';
     margin-block-start: var(--spacing-small);
     margin-inline-end: var(--spacing-small);
     margin-block-end: var(--spacing-small);
@@ -61,14 +61,14 @@ $container-max-width: calc(23 * var(--spacing-mega));
     line-height: normal;
   }
   // target any item which has a class that contains arabic
-  *[class~="arabic"] {
+  *[class~='arabic'] {
     direction: rtl;
     /* stylelint-disable-next-line csstools/use-logical */
     text-align: right;
     margin-block-end: var(--spacing-small);
   }
   // target any item which has a class that contains uthmani
-  *[class~="uthmani"] {
+  *[class~='uthmani'] {
     font-family: UthmanicHafs;
     font-size: larger;
   }
@@ -131,6 +131,29 @@ $container-max-width: calc(23 * var(--spacing-mega));
   max-width: calc(2.5 * var(--spacing-mega));
 }
 
+.salinButton {
+  bottom: 10px; // adjust this value as needed
+  right: 10px; // adjust this value as needed
+  background-color: #02989a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: darken(#02989a, 10%);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    background-color: lighten(#02989a, 10%);
+  }
+}
+
 .tafsirSkeletonItem {
   height: var(--spacing-mega);
   margin-block-end: var(--spacing-medium);
@@ -163,4 +186,4 @@ $container-max-width: calc(23 * var(--spacing-mega));
   width: calc(6 * var(--spacing-medium));
 }
 
-@include utility.generate-font-scales("tafsir");
+@include utility.generate-font-scales('tafsir');
