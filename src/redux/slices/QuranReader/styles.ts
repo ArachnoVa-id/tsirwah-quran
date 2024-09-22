@@ -10,7 +10,7 @@ import SliceName from '@/redux/types/SliceName';
 import PreferenceGroup from 'types/auth/PreferenceGroup';
 import { MushafLines, QuranFont } from 'types/QuranReader';
 
-export const MAXIMUM_QURAN_FONT_STEP = 10;
+export const MAXIMUM_QURAN_FONT_STEP = 12;
 export const MAXIMUM_TRANSLATIONS_FONT_STEP = 10;
 export const MAXIMUM_TAFSIR_FONT_STEP = 10;
 export const MAXIMUM_WORD_BY_WORD_FONT_STEP = 6;
