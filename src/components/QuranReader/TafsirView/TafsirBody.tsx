@@ -273,6 +273,11 @@ const TafsirBody = ({
       let text = defaultText;
       let languageId = defaultLanguage;
 
+      if (tafsirData) {
+        verses = tafsirData as Record<string, Verse>;
+      }
+
+      if (!tafsirData) return <TafsirSkeleton />;
       if (data?.tafsir) {
         // eslint-disable-next-line prefer-destructuring
         // verses = data.tafsir.verses;
@@ -280,15 +285,7 @@ const TafsirBody = ({
         text = data.tafsir.text;
         // eslint-disable-next-line prefer-destructuring
         languageId = data.tafsir.languageId;
-      }
-
-      if (tafsirData) {
-        verses = tafsirData as Record<string, Verse>;
-      }
-
-      if (!tafsirData) return <TafsirSkeleton />;
-
-      if (data?.data) {
+      } else if (data?.data) {
         if (selectedTafsirIdOrSlug === 'id-tafsir-tahlili') {
           text = data.data.tafsir.tahlili.replace(/\n/g, '<br></br>');
         } else if (selectedTafsirIdOrSlug === 'id-tafsir-ringkas-kemenag') {

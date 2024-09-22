@@ -12,7 +12,7 @@ export default {
   },
   quranReaderStyles: {
     ...DEFAULT_SETTINGS.quranReaderStyles,
-    quranFont: QuranFont.MadaniV2,
+    quranFont: QuranFont.MadaniV1,
   },
   translations: { ...DEFAULT_SETTINGS.translations, selectedTranslations: [DEFAULT_TRANSLATION] },
 } as DefaultSettings;
