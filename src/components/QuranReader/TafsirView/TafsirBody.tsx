@@ -25,6 +25,7 @@ import Separator from '@/dls/Separator/Separator';
 import usePersistPreferenceGroup from '@/hooks/auth/usePersistPreferenceGroup';
 import { selectQuranReaderStyles } from '@/redux/slices/QuranReader/styles';
 import { selectTafsirs, setSelectedTafsirs } from '@/redux/slices/QuranReader/tafsirs';
+import TafsirInfo from '@/types/TafsirInfo';
 import Verse from '@/types/Verse';
 import { makeTafsirContentUrl, makeTafsirsUrl } from '@/utils/apiPaths';
 import { textToBlob } from '@/utils/blob';
@@ -189,7 +190,22 @@ const TafsirBody = ({
     setSelectedLanguage(newLang);
 
     if (tafsirSelectionList) {
-      const firstTafsirOfLanguage = getFirstTafsirOfLanguage(tafsirSelectionList, newLang);
+      let firstTafsirOfLanguage: TafsirInfo | null = null;
+      if (newLang === 'indonesian') {
+        firstTafsirOfLanguage = {
+          id: 820,
+          name: 'Tafsir Ringkas Kemenag',
+          authorName: 'Kementrian Agama Republik Indonesia',
+          slug: 'id-tafsir-ringkas-kemenag',
+          languageName: 'indonesian',
+          translatedName: {
+            name: 'Tafsir Ringkas Kemenag',
+            languageName: 'indonesian',
+          },
+        };
+      } else {
+        firstTafsirOfLanguage = getFirstTafsirOfLanguage(tafsirSelectionList, newLang);
+      }
       if (firstTafsirOfLanguage) {
         const { id, slug } = firstTafsirOfLanguage;
         onTafsirSelected(id, slug);
@@ -238,6 +254,8 @@ const TafsirBody = ({
     return combinedText.trim(); // Trim to remove any trailing spaces
   }
 
+  let teksTafsir = '';
+
   const copyTafsirText = async () => {
     if (!tafsirText || !tafsirData) return;
 
@@ -245,13 +263,16 @@ const TafsirBody = ({
     const origin = getWindowOrigin('id');
     const [chapter, verse] = getVerseAndChapterNumbersFromKey(Object.keys(tafsirData)[0]);
 
-    const formattedTafsirText = tafsirText.replace(/<br><\/br>/g, '\n\n');
+    // const formattedTafsirText = tafsirText.replace(/<br><\/br>/g, '\n\n').replace(/<[^>]*>/g, '');
+    const formattedTafsirText = teksTafsir.replace(/<br><\/br>/g, '\n\n').replace(/<[^>]*>/g, '');
 
     const textBlob = textToBlob(
       `${ayahText}\n\n${formattedTafsirText}\n\n🔗 Selengkapnya: ${origin}/${chapter}:${verse}\n\n📲 Download Aplikasi Pesantren Digital disini: https://play.google.com/store/apps/details?id=com.wnapp.id1694615184829`,
     );
     copyText(Promise.resolve(textBlob));
   };
+
+  useEffect(() => {}, [tafsirText]);
 
   // Assuming `tafsirData` is stored in the component state
 
@@ -283,18 +304,25 @@ const TafsirBody = ({
         // verses = data.tafsir.verses;
         // eslint-disable-next-line prefer-destructuring
         text = data.tafsir.text;
+
+        setTafsirText(text);
         // eslint-disable-next-line prefer-destructuring
         languageId = data.tafsir.languageId;
       } else if (data?.data) {
         if (selectedTafsirIdOrSlug === 'id-tafsir-tahlili') {
           text = data.data.tafsir.tahlili.replace(/\n/g, '<br></br>');
+
+          setTafsirText(text);
         } else if (selectedTafsirIdOrSlug === 'id-tafsir-ringkas-kemenag') {
           text = data.data.tafsir.wajiz.replace(/\n/g, '<br></br>');
+
+          setTafsirText(text);
         }
         languageId = 67;
       }
 
-      setTafsirText(text);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      teksTafsir = text;
 
       const langData = getLanguageDataById(languageId);
 
@@ -371,7 +399,16 @@ const TafsirBody = ({
       );
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [chaptersData, lang, scrollToTop, selectedChapterId, selectedTafsirIdOrSlug, t, tafsirData],
+    [
+      chaptersData,
+      lang,
+      scrollToTop,
+      selectedChapterId,
+      selectedTafsirIdOrSlug,
+      t,
+      tafsirData,
+      tafsirsState,
+    ],
   );
 
   const onChapterIdChange = (newChapterId) => {

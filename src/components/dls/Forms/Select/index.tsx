@@ -42,7 +42,7 @@ const Select: React.FC<Props> = ({
   disabled = false,
   required = false,
   size = SelectSize.Medium,
-  placeholder = 'Select an option',
+  placeholder = 'Pilih opsi',
   defaultStyle = true,
   className,
   withBackground = true,
