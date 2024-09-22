@@ -12,7 +12,7 @@ import styles from './NavigationDrawerBody.module.scss';
 import BookOpen from '@/icons/book-open.svg';
 import IconHome from '@/icons/home.svg';
 // import IconInfo from '@/icons/info.svg';
-import IconLock from '@/icons/lock.svg';
+// import IconLock from '@/icons/lock.svg';
 // import MobileIcon from '@/icons/mobile.svg';
 // import IconProductUpdates from '@/icons/product-updates.svg';
 // import IconQ from '@/icons/Q_simple.svg';
@@ -44,7 +44,7 @@ const NavigationDrawerBody = () => {
       {/* <NavigationDrawerItem title="Updates" icon={<IconUpdates />} href="/updates" /> */}
       {/* <NavigationDrawerItem title={t('developers')} icon={<IconDevelopers />} href="/developers" /> */}
       {/* <NavigationDrawerItem title="Contribute" icon={<IconDonate />} href="/contribute" /> */}
-      <NavigationDrawerItem title={t('privacy')} icon={<IconLock />} href="/privacy" />
+      {/* <NavigationDrawerItem title={t('privacy')} icon={<IconLock />} href="/privacy" /> */}
       {/* <NavigationDrawerItem
         title={t('product-updates')}
         icon={<IconProductUpdates />}

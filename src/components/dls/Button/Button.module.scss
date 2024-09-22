@@ -1,4 +1,4 @@
-@use "src/styles/utility";
+@use 'src/styles/utility';
 
 .base {
   border: none;
@@ -133,6 +133,16 @@
     @include utility.lighten-background-color;
   }
 }
+
+.white {
+  background-color: transparent;
+  border: none;
+  color: white;
+  &:hover {
+    background-color: var(--themed-bg);
+    @include utility.lighten-background-color;
+  }
+}
 // corner case for secondary ghost button
 .ghost.secondary {
   --themed-bg: var(--color-text-faded);
@@ -180,7 +190,7 @@
   height: calc(0.5 * var(--button-size));
   width: calc(0.5 * var(--button-size));
 }
-.base[dir="rtl"][data-auto-flip-icon="true"] svg {
+.base[dir='rtl'][data-auto-flip-icon='true'] svg {
   transform: scaleX(-1);
 }
 

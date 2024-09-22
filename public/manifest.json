@@ -1,6 +1,6 @@
 {
-  "name": "Tsirwah Quran",
-  "short_name": "Tsirwah Quran",
+  "name": "Alquran Tsirwah",
+  "short_name": "Alquran Tsirwah",
   "icons": [
     {
       "src": "/images/logo/Logo@192x192.png",
@@ -32,7 +32,7 @@
       "purpose": "maskable"
     }
   ],
-  "shortcuts" : [
+  "shortcuts": [
     {
       "name": "Surah Al-Mulk",
       "url": "/67",
@@ -64,5 +64,5 @@
   "display": "standalone",
   "orientation": "portrait",
   "categories": ["books", "education"],
-  "description": "Tsirwah Quran adalah aplikasi Alquran berbasis web sumber terbuka Quran.com"
+  "description": "Alquran Tsirwah adalah aplikasi Alquran berbasis web sumber terbuka Quran.com"
 }

@@ -3,11 +3,11 @@
   "body-placeholder": "Use this space to save general notes, or to write a reflection.",
   "checkbox-refl-intro": {
     "checkbox": {
-      "desc": "<li>Posting means that your reflection will be shared on QuranReflect under your name where it will be reviewed by the moderation team and visible to the QuranReflect community.</li><li>Once your post is reviewed and approved or promoted by our moderation team, you may get likes, comments and follow notifications. Upon signing into QuranReflect, you can update your notification settings to suit your preferences.</li><li>You may view your notes and posted reflections under your Tsirwah Quran login profile in the “My Notes and Reflections” section, or log into <link>QuranReflect</link> using your Tsirwah Quran sign-in email.</li>",
+      "desc": "<li>Posting means that your reflection will be shared on QuranReflect under your name where it will be reviewed by the moderation team and visible to the QuranReflect community.</li><li>Once your post is reviewed and approved or promoted by our moderation team, you may get likes, comments and follow notifications. Upon signing into QuranReflect, you can update your notification settings to suit your preferences.</li><li>You may view your notes and posted reflections under your Alquran Tsirwah login profile in the “My Notes and Reflections” section, or log into <link>QuranReflect</link> using your Alquran Tsirwah sign-in email.</li>",
       "title": "What happens if I check this box?"
     },
     "post-button": "What happens when I post on QuranReflect?",
-    "qr-intro": "QuranReflect, along with Tsirwah Quran, is a part of the Quran.Foundation family. It is a social platform for sharing personal reflections on the Quran, encouraging users to internalize its messages and share insights that inspire positive change. Unlike tafsir, which is a scholarly interpretation, reflections are personal thoughts and experiences related to the verses. User posts to QuranReflect are reviewed and moderated by a qualified team, who will help ensure quality of content, etiquettes when interacting with the Quran, and they will empower users by sharing feedback and highlighting valuable discourse thus fostering a spiritually uplifting, Quran-focused community. Learn more: <link>Quranreflect.com/faq</link>",
+    "qr-intro": "QuranReflect, along with Alquran Tsirwah, is a part of the Quran.Foundation family. It is a social platform for sharing personal reflections on the Quran, encouraging users to internalize its messages and share insights that inspire positive change. Unlike tafsir, which is a scholarly interpretation, reflections are personal thoughts and experiences related to the verses. User posts to QuranReflect are reviewed and moderated by a qualified team, who will help ensure quality of content, etiquettes when interacting with the Quran, and they will empower users by sharing feedback and highlighting valuable discourse thus fostering a spiritually uplifting, Quran-focused community. Learn more: <link>Quranreflect.com/faq</link>",
     "title": "What is QuranReflect and what happens if I check this box?"
   },
   "click-to-see-more": "click to see more",
@@ -46,7 +46,7 @@
   "qr-tooltip": "<span><link>QuranReflect</link> is a social platform for sharing reflections on the Quran. Connect around the Quran, connect with what matters.</span>",
   "reflections-intro": {
     "line-1": "To view and interact with comments, engage with the community, and do more, visit <link>QuranReflect.com</link>.",
-    "line-2": "You can log into your linked QuranReflect account by logging in or signing up with the same Tsirwah Quran email used in your sign-in.",
+    "line-2": "You can log into your linked QuranReflect account by logging in or signing up with the same Alquran Tsirwah email used in your sign-in.",
     "line-3": "Content that is not suitable for public viewing will be hidden or deleted. Users posting inappropriate content will be blocked.",
     "title": "Learn more about Posted Reflections"
   },

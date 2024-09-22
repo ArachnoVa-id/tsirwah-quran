@@ -6,17 +6,17 @@
     "auth-onboarding": {
       "data-sync": {
         "action": "下一个",
-        "description": "无论您是在手机还是笔记本电脑上使用 Tsirwah Quran，您的书签、最后阅读的经文和您的偏好都将可用",
+        "description": "无论您是在手机还是笔记本电脑上使用 Alquran Tsirwah，您的书签、最后阅读的经文和您的偏好都将可用",
         "title": "您的数据将在设备间同步<br></br>"
       },
       "feedback": {
         "action": "好，知道了",
-        "description": "感谢您使用 Tsirwah Quran，我们很高兴听到您对<link> feedback.Tsirwah Quran </link> 的反馈",
+        "description": "感谢您使用 Alquran Tsirwah，我们很高兴听到您对<link> feedback.Alquran Tsirwah </link> 的反馈",
         "title": "我们想听听你的想法"
       },
       "quran-foundation-link": {
         "action": "下一个",
-        "description": "使用您的 Tsirwah Quran 登录名访问 QuranReflect.com — 一个致力于反思古兰经的蓬勃发展的全球社区。",
+        "description": "使用您的 Alquran Tsirwah 登录名访问 QuranReflect.com — 一个致力于反思古兰经的蓬勃发展的全球社区。",
         "title": "在 Quran.Foundation 应用程序中使用您的帐户！"
       },
       "quran-growth-journey": {
@@ -26,7 +26,7 @@
       },
       "welcome": {
         "action": "看看有什么新鲜事",
-        "title": "欢迎来到 Tsirwah Quran <br></br>用户帐户"
+        "title": "欢迎来到 Alquran Tsirwah <br></br>用户帐户"
       }
     },
     "collections-announcement": {
@@ -111,7 +111,7 @@
   "community": {
     "cta": "加入社区",
     "header": "加入由穆斯林建设者和技术人员组成的 QDC 社区。",
-    "sub-header": "注册 Tsirwah Quran Discord，参与并与领先的社区建设伊斯兰技术合作。",
+    "sub-header": "注册 Alquran Tsirwah Discord，参与并与领先的社区建设伊斯兰技术合作。",
     "title": "社区"
   },
   "complete-sign-up": "完成您的注册",
@@ -169,7 +169,7 @@
     "text_uthmani": "纳斯赫体"
   },
   "footer": {
-    "description": "Tsirwah Quran是一项持久的施舍。我们希望每个人都能轻松地阅读和学习尊贵的《古兰经》。尊贵的古兰经有很多名字，包括 Al-Quran Al-Kareem、Al-Ketab、Al-Furqan、Al-Maw'itha、Al-Thikr 和 Al-Noor。",
+    "description": "Alquran Tsirwah是一项持久的施舍。我们希望每个人都能轻松地阅读和学习尊贵的《古兰经》。尊贵的古兰经有很多名字，包括 Al-Quran Al-Kareem、Al-Ketab、Al-Furqan、Al-Maw'itha、Al-Thikr 和 Al-Noor。",
     "hiring": "我们正在招聘！加入古兰经基金会团队并为我们的使命做出贡献。 <link>立即申请！ </link>",
     "rights": "版权所有",
     "title": "阅读、学习和学习《古兰经》。"
@@ -188,7 +188,7 @@
     "title": "在最好的日子里赠送！"
   },
   "fundraising": {
-    "description": "每月的捐款帮助我们改善 Tsirwah Quran 并维持运营，因此我们不再专注于筹款，而是更多地关注创造影响力。",
+    "description": "每月的捐款帮助我们改善 Alquran Tsirwah 并维持运营，因此我们不再专注于筹款，而是更多地关注创造影响力。",
     "title": "成为每月捐助者"
   },
   "help": "帮助",
@@ -260,7 +260,7 @@
   "product-updates": "产品更新",
   "profile": "轮廓",
   "q-reflect": "古兰经反射",
-  "quran-com": "Tsirwah Quran",
+  "quran-com": "Alquran Tsirwah",
   "quran-radio": "在线听古兰经",
   "reading-history": "阅读历史",
   "reading-preference": {

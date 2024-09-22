@@ -11,7 +11,7 @@
       },
       "feedback": {
         "action": "Tamam, anladım.",
-        "description": "Kuran.com'u kullandığınız için teşekkür ederiz ve <link> feedback.Tsirwah Quran </link> ile ilgili görüşlerinizi duymaktan memnuniyet duyarız.",
+        "description": "Kuran.com'u kullandığınız için teşekkür ederiz ve <link> feedback.Alquran Tsirwah </link> ile ilgili görüşlerinizi duymaktan memnuniyet duyarız.",
         "title": "Düşüncelerinizi duymak istiyoruz"
       },
       "quran-foundation-link": {
@@ -260,7 +260,7 @@
   "product-updates": "Ürün Güncellemeleri",
   "profile": "Profil",
   "q-reflect": "KuranYansıtmak",
-  "quran-com": "Tsirwah Quran",
+  "quran-com": "Alquran Tsirwah",
   "quran-radio": "Kuran Radyo",
   "reading-history": "tarih okuma",
   "reading-preference": {

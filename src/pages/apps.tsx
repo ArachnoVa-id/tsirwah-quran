@@ -84,7 +84,7 @@ const AppsPage = () => {
 
   const apps = {
     quran: {
-      title: 'Tsirwah Quran',
+      title: 'Alquran Tsirwah',
       description: t('apps:quran-desc'),
       ios: 'https://itunes.apple.com/us/app/quran-by-quran.com-qran/id1118663303',
       android:

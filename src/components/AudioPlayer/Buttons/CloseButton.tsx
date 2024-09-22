@@ -15,7 +15,7 @@ const CloseButton = () => {
     <Button
       tooltip={t('audio.player.close-audio-player')}
       shape={ButtonShape.Circle}
-      variant={ButtonVariant.Ghost}
+      variant={ButtonVariant.White}
       onClick={withStopPropagation(() => {
         logButtonClick(`audio_player_overflow_menu_close`);
         audioService.send({ type: 'CLOSE' });

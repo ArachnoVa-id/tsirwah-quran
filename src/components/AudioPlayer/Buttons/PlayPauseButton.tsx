@@ -27,7 +27,7 @@ const PlayPauseButton = () => {
       <Button
         tooltip={`${t('loading')}...`}
         shape={ButtonShape.Circle}
-        variant={ButtonVariant.Ghost}
+        variant={ButtonVariant.White}
         isDisabled={isLoading}
       >
         <Spinner size={SpinnerSize.Large} />
@@ -39,7 +39,7 @@ const PlayPauseButton = () => {
       <Button
         tooltip={t('audio.player.pause')}
         shape={ButtonShape.Circle}
-        variant={ButtonVariant.Ghost}
+        variant={ButtonVariant.White}
         onClick={withStopPropagation(() => {
           logButtonClick('audio_player_pause');
           audioService.send('TOGGLE');
@@ -53,7 +53,7 @@ const PlayPauseButton = () => {
     <Button
       tooltip={t('audio.player.play')}
       shape={ButtonShape.Circle}
-      variant={ButtonVariant.Ghost}
+      variant={ButtonVariant.White}
       onClick={withStopPropagation(() => {
         logButtonClick('audio_player_play');
         audioService.send('TOGGLE');

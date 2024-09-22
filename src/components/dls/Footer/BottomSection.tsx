@@ -35,7 +35,7 @@ const BottomSection = () => {
           </Link>
         </div> */}
         <div className={styles.copyright}>
-          © {localizedCurrentYear}
+          Copyright {localizedCurrentYear}
           {' Alquran Tsirwah, didukung oleh '}
           <Link href="https://quran.com" variant={LinkVariant.Highlight} shouldPrefetch={false}>
             {
@@ -44,7 +44,10 @@ const BottomSection = () => {
               'Quran.com'
             }
           </Link>
-          . {t('footer.rights')}
+          . {t('footer.rights')}. Silahkan dapat mendalami{' '}
+          <Link href="/privacy" variant={LinkVariant.Highlight} shouldPrefetch={false}>
+            kebijakan privasi kami
+          </Link>
         </div>
       </div>
       {/* <div className={styles.actionsSections}> */}

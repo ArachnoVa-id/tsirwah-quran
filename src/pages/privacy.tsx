@@ -36,7 +36,7 @@ const PrivacyPage: NextPage = (): JSX.Element => {
               i18nKey="privacy:info-collection.desc"
             />
           </p>
-          <h2>{t('personal-info-use.title')}</h2>
+          {/* <h2>{t('personal-info-use.title')}</h2>
           <p>
             <Trans
               components={{
@@ -46,10 +46,10 @@ const PrivacyPage: NextPage = (): JSX.Element => {
               }}
               i18nKey="privacy:personal-info-use.desc"
             />
-          </p>
-          <h2>{t('log-data.title')}</h2>
-          <p>{t('log-data.desc')}</p>
-          <h2>{t('communication.title')}</h2>
+          </p> */}
+          {/* <h2>{t('log-data.title')}</h2>
+          <p>{t('log-data.desc')}</p> */}
+          {/* <h2>{t('communication.title')}</h2>
           <p>{t('communication.desc')}</p>
           <h2>{t('data-protection.title')}</h2>
           <p>
@@ -68,7 +68,7 @@ const PrivacyPage: NextPage = (): JSX.Element => {
           <h2>{t('data-analysis.title')}</h2>
           <p>{t('data-analysis.desc')}</p>
           <h2>{t('data-deletion.title')}</h2>
-          <p>{t('data-deletion.desc')}</p>
+          <p>{t('data-deletion.desc')}</p> */}
           <h2>{t('cookies.title')}</h2>
           <p>
             <Trans
@@ -81,7 +81,7 @@ const PrivacyPage: NextPage = (): JSX.Element => {
               i18nKey="privacy:cookies.desc"
             />
           </p>
-          <h2>{t('contact-us.title')}</h2>
+          {/* <h2>{t('contact-us.title')}</h2>
           <p>
             <Trans
               components={{
@@ -94,7 +94,7 @@ const PrivacyPage: NextPage = (): JSX.Element => {
               }}
               i18nKey="privacy:contact-us.desc"
             />
-          </p>
+          </p> */}
         </div>
       </PageContainer>
     </>

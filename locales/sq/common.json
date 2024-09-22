@@ -6,17 +6,17 @@
     "auth-onboarding": {
       "data-sync": {
         "action": "Tjetra",
-        "description": "Pavarësisht nëse jeni duke përdorur Tsirwah Quran në telefonin ose laptopin tuaj, faqeshënuesit, vargjet e fundit të lexuara dhe preferencat tuaja do të jenë të disponueshme",
+        "description": "Pavarësisht nëse jeni duke përdorur Alquran Tsirwah në telefonin ose laptopin tuaj, faqeshënuesit, vargjet e fundit të lexuara dhe preferencat tuaja do të jenë të disponueshme",
         "title": "Të dhënat tuaja do të sinkronizohen <br></br> nëpër pajisje"
       },
       "feedback": {
         "action": "Mirë, e kuptova",
-        "description": "Faleminderit që përdorni Tsirwah Quran dhe do të ishim të lumtur të dëgjonim komentet tuaja në <link> feedback.Tsirwah Quran </link>",
+        "description": "Faleminderit që përdorni Alquran Tsirwah dhe do të ishim të lumtur të dëgjonim komentet tuaja në <link> feedback.Alquran Tsirwah </link>",
         "title": "Ne duam të dëgjojmë mendimet tuaja"
       },
       "quran-foundation-link": {
         "action": "Tjetra",
-        "description": "Përdorni hyrjen tuaj në Tsirwah Quran për të hyrë në QuranReflec.com - një komunitet i lulëzuar global i angazhuar në reflektimin Kur'anor.",
+        "description": "Përdorni hyrjen tuaj në Alquran Tsirwah për të hyrë në QuranReflec.com - një komunitet i lulëzuar global i angazhuar në reflektimin Kur'anor.",
         "title": "Përdorni llogarinë tuaj nëpër aplikacionet Quran.Foundation!"
       },
       "quran-growth-journey": {
@@ -26,7 +26,7 @@
       },
       "welcome": {
         "action": "Shihni çfarë ka të re",
-        "title": "Mirë se vini në llogarinë e përdoruesit <br></br> të Tsirwah Quran"
+        "title": "Mirë se vini në llogarinë e përdoruesit <br></br> të Alquran Tsirwah"
       }
     },
     "collections-announcement": {
@@ -111,7 +111,7 @@
   "community": {
     "cta": "Bashkohuni me komunitetin",
     "header": "Bashkohuni me Komunitetin QDC të ndërtuesve dhe teknologëve muslimanë.",
-    "sub-header": "Regjistrohu për Tsirwah Quran Discord për të marrë pjesë dhe për të bashkëpunuar me komunitetin kryesor që ndërton teknologjinë islame.",
+    "sub-header": "Regjistrohu për Alquran Tsirwah Discord për të marrë pjesë dhe për të bashkëpunuar me komunitetin kryesor që ndërton teknologjinë islame.",
     "title": "Komuniteti"
   },
   "complete-sign-up": "Plotësoni regjistrimin tuaj",
@@ -169,7 +169,7 @@
     "text_uthmani": "Osmani"
   },
   "footer": {
-    "description": "Tsirwah Quran është një Jariyah Sadakah. Shpresojmë t'ua bëjmë të lehtë të gjithëve leximin, studimin dhe mësimin e Kuranit Fisnik. Kurani Fisnik ka shumë emra duke përfshirë Al-Kuran Al-Kareem, Al-Ketab, Al-Furkan, Al-Maw'itha, Al-Thikr dhe Al-Noor.",
+    "description": "Alquran Tsirwah është një Jariyah Sadakah. Shpresojmë t'ua bëjmë të lehtë të gjithëve leximin, studimin dhe mësimin e Kuranit Fisnik. Kurani Fisnik ka shumë emra duke përfshirë Al-Kuran Al-Kareem, Al-Ketab, Al-Furkan, Al-Maw'itha, Al-Thikr dhe Al-Noor.",
     "hiring": "Ne po punësojmë! Bashkohuni me ekipin e QuranFoundation dhe kontribuoni në misionin tonë. <link> Apliko tani! </link>",
     "rights": "Të gjitha të drejtat e rezervuara",
     "title": "Lexoni, studioni dhe mësoni Kuranin Fisnik."
@@ -188,7 +188,7 @@
     "title": "Jepni në ditët më të mira!"
   },
   "fundraising": {
-    "description": "Donacionet mujore na ndihmojnë të përmirësojmë Tsirwah Quran dhe të mbajmë operacionet, kështu që ne fokusohemi më pak në mbledhjen e fondeve dhe më shumë në krijimin e ndikimit.",
+    "description": "Donacionet mujore na ndihmojnë të përmirësojmë Alquran Tsirwah dhe të mbajmë operacionet, kështu që ne fokusohemi më pak në mbledhjen e fondeve dhe më shumë në krijimin e ndikimit.",
     "title": "Bëhuni një donator mujor"
   },
   "help": "Ndihmë",
@@ -260,7 +260,7 @@
   "product-updates": "Përditësimet e produktit",
   "profile": "Profili",
   "q-reflect": "Kurani Reflekto",
-  "quran-com": "Tsirwah Quran",
+  "quran-com": "Alquran Tsirwah",
   "quran-radio": "Kuran Radio",
   "reading-history": "Leximi i historisë",
   "reading-preference": {

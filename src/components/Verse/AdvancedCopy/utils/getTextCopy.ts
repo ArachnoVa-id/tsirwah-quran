@@ -41,7 +41,10 @@ const getTextToCopy = ({
     ...(shouldCopyFont && {
       ...getMushafId(shouldCopyFont, MushafLines.SixteenLines),
     }), // only include the fonts when at least 1 font has been selected.
-  }).then((res) => res.result);
+  }).then(
+    (res) =>
+      `${res.result} Mari tingkatkan pengalaman anda dengan mengunduh Tsirwah App di https://play.google.com/store/apps/details?id=com.wnapp.id1694615184829`,
+  );
 };
 
 export default getTextToCopy;

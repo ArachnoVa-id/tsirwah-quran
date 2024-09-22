@@ -12,15 +12,24 @@ const NavbarLogoWrapper = () => {
   const isHomePage = router.pathname === '/';
 
   return (
-    <Link href="/" className={`${styles.logoWrapper}`} title="tsirwah-quran">
-      <Image
-        src={isHomePage ? '/images/logo/tsirwah-logo.png' : '/icons/FaHome.svg'}
-        alt="tsirwah-quran"
-        width={120}
-        height={40}
-        quality={100}
-      />
-    </Link>
+    <>
+      {isHomePage && (
+        <Link href="/" className={`${styles.logoWrapper}`} title="tsirwah-quran">
+          <Image
+            src="/images/logo/tsirwah-logo.png"
+            alt="tsirwah-quran"
+            width={120}
+            height={40}
+            quality={100}
+          />
+        </Link>
+      )}
+      {!isHomePage && (
+        <Link href="/" className={`${styles.logoWrapper}`} title="tsirwah-quran">
+          <Image src="/icons/FaHome.svg" alt="tsirwah-quran" width={70} height={28} quality={100} />
+        </Link>
+      )}
+    </>
   );
 };
 

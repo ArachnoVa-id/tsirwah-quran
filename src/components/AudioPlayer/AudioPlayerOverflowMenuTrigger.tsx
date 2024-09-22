@@ -33,7 +33,7 @@ const AudioPlayerOverflowMenuTrigger: React.FC = () => {
     >
       <Button
         tooltip={t('more')}
-        variant={ButtonVariant.Ghost}
+        variant={ButtonVariant.White}
         shape={ButtonShape.Circle}
         id="audio-player-overflow-menu-trigger"
       >

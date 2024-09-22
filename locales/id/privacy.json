@@ -8,7 +8,7 @@
     "title": "Hubungi kami"
   },
   "cookies": {
-    "desc": "Tsirwah Quran menggunakan kuki untuk meningkatkan pengalaman penelusuran Anda, menyediakan konten yang dipersonalisasi, dan menganalisis lalu lintas situs web. Dengan mengakses dan menggunakan situs web kami, Anda menyetujui penggunaan kuki sesuai dengan Kebijakan Privasi ini. <br/> <br/> <li> Jenis Kuki yang Kami Gunakan: </li> <subLi> Kuki yang Diperlukan: Kuki ini sangat penting agar situs web kami berfungsi dengan baik dan mengaktifkan fitur-fitur dasar, seperti navigasi halaman dan akses ke area-area yang aman. Kuki ini tidak mengumpulkan informasi pengenal pribadi apa pun. Tanpa kuki ini, beberapa bagian situs web mungkin tidak berfungsi dengan benar. </subLi> <subLi> Kuki Analitis dan Kinerja: Kami menggunakan kuki ini untuk mengumpulkan informasi tentang cara pengunjung menggunakan situs web kami, termasuk jumlah pengunjung, halaman yang mereka kunjungi, dan waktu yang dihabiskan di setiap halaman. Data ini membantu kami menganalisis dan meningkatkan kinerja dan fungsionalitas situs web kami. Kuki ini tidak mengidentifikasi Anda secara pribadi; semua data dikumpulkan dan anonim. </subLi>",
+    "desc": "Alquran Tsirwah adalah platform yang didirikan oleh Tsirwah Pesantren Digital dalam upaya memberdayakan kebermanfaatan kitab suci umat islam agar dapat membantu ibadah dan hikmah setiap umat muslim. <br/> <br/> <li> Jenis Kuki yang Kami Gunakan: </li> <subLi> Kuki yang Diperlukan: Kuki ini sangat penting agar situs web kami berfungsi dengan baik dan mengaktifkan fitur-fitur dasar, seperti navigasi halaman dan akses ke area-area yang aman. Kuki ini tidak mengumpulkan informasi pengenal pribadi apa pun. Tanpa kuki ini, beberapa bagian situs web mungkin tidak berfungsi dengan benar. </subLi> <subLi> Kuki Analitis dan Kinerja: Kami menggunakan kuki ini untuk mengumpulkan informasi tentang cara pengunjung menggunakan situs web kami, termasuk jumlah pengunjung, halaman yang mereka kunjungi, dan waktu yang dihabiskan di setiap halaman. Data ini membantu kami menganalisis dan meningkatkan kinerja dan fungsionalitas situs web kami. Kuki ini tidak mengidentifikasi Anda secara pribadi; semua data dikumpulkan dan anonim. </subLi>",
     "title": "Penggunaan Kuki"
   },
   "data-analysis": {
@@ -32,14 +32,14 @@
     "title": "Berbagi Data"
   },
   "info-collection": {
-    "desc": "Kami menghimpun informasi pribadi tertentu dari pengguna yang memilih untuk membuat akun di Tsirwah Quran. Informasi ini dapat mencakup: <br/> <br/> <underline> Alamat Email </underline> : Kami menyimpan alamat email Anda untuk memfasilitasi proses pembuatan akun dan untuk tujuan komunikasi terkait akun Anda, termasuk pemulihan akun dan notifikasi keamanan.",
+    "desc": "Alquran Tsirwah menghimpun beberapa informasi dari pengguna seperti <br/> <br/> Personalisasi : cara dan proses untuk mengelola riwayat membaca anda, bagian mana dari Alquran Tsirwah yang terakhir dibaca.  <br/> <br/> Penandaan : cara dan proses untuk membantu anda menandai ayat.",
     "title": "Pengambilan Informasi"
   },
   "log-data": {
     "desc": "Kami menghimpun informasi yang dikirimkan browser Anda setiap kali Anda mengunjungi Layanan kami (“Data Log”). Data Log ini dapat mencakup informasi seperti alamat Protokol Internet (\"IP\") komputer Anda, jenis browser, versi browser, halaman Layanan kami yang Anda kunjungi, waktu dan tanggal kunjungan Anda, waktu yang dihabiskan untuk halaman tersebut dan statistik lainnya.",
     "title": "Data Log"
   },
-  "main-privacy-desc": "The Quran.Foundation (termasuk Tsirwah Quran) adalah organisasi nirlaba 501(c)(3) yang berusaha memberdayakan setiap insan untuk mendapatkan manfaat dari Al-Qur'an. Quran.Foundation menghargai dan menghormati privasi semua pengguna kami.",
+  "main-privacy-desc": "Alquran Tsirwah adalah platform yang didirikan oleh Tsirwah Pesantren Digital dalam upaya memberdayakan kebermanfaatan kitab suci umat islam agar dapat membantu ibadah dan hikmah setiap umat muslim.",
   "personal-info-use": {
     "desc": "Kami menggunakan informasi pribadi yang kami kumpulkan untuk tujuan berikut: <br/> <li> <underline> Pembuatan dan Pengelolaan Akun </underline> : Alamat email Anda digunakan untuk membuat dan mengelola akun Anda di situs web kami. Ini memungkinkan Anda untuk masuk, mengakses pengaturan Anda, dan menyimpan Penanda dan riwayat membaca Anda. </li> <li> <underline> Personalisasi </underline> : Kami dapat menggunakan riwayat membaca Anda untuk memberikan rekomendasi dan saran yang dipersonalisasi berdasarkan preferensi dan minat Anda. </li>",
     "title": "Penggunaan Informasi Pribadi"

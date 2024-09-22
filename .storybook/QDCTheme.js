@@ -1,10 +1,10 @@
-import { create } from "@storybook/theming";
+import { create } from '@storybook/theming';
 
 export default create({
-  base: "dark",
-  brandTitle: "Tsirwah Quran",
-  brandUrl: "https://quran.com",
-  brandImage: "https://quran.com/favicon.ico",
-  brandTarget: "_self",
-  colorSecondary: "#2ca4ab",
+  base: 'dark',
+  brandTitle: 'Alquran Tsirwah',
+  brandUrl: 'https://quran.com',
+  brandImage: 'https://quran.com/favicon.ico',
+  brandTarget: '_self',
+  colorSecondary: '#2ca4ab',
 });

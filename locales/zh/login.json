@@ -16,7 +16,7 @@
     "AuthenticationError": "身份验证失败。请稍后再试",
     "TokenExpiredError": "您已登出，请重新登入。"
   },
-  "login-title": "登录 Tsirwah Quran",
+  "login-title": "登录 Alquran Tsirwah",
   "other-options": "其他登录选项",
   "privacy-policy": "保护您的隐私是我们的首要任务 - 注册即表示您同意我们的<link>隐私政策</link>",
   "verify-code": "验证提供的安全代码是否与以下文本匹配："

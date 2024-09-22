@@ -13,7 +13,6 @@ $fallbackColor: #22a5ad;
   inset: 0;
   background-color: $fallbackColor;
   background-image: url('/images/background.jpg');
-  background-size: cover;
   background-position: center;
 
   @include theme.dark {

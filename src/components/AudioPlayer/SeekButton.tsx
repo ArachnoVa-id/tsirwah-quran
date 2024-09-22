@@ -48,7 +48,7 @@ const SeekButton = ({ type, isLoading }: SeekButtonProps) => {
   return (
     <Button
       tooltip={type === SeekButtonType.PrevAyah ? t('previous-ayah') : t('next-ayah')}
-      variant={ButtonVariant.Ghost}
+      variant={ButtonVariant.White}
       shape={ButtonShape.Circle}
       onClick={onSeek}
       isDisabled={isDisabled}

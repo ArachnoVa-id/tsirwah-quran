@@ -6,17 +6,17 @@
     "auth-onboarding": {
       "data-sync": {
         "action": "Prossimo",
-        "description": "Sia che tu stia utilizzando Tsirwah Quran sul tuo telefono o sul tuo laptop, i tuoi segnalibri, gli ultimi versetti letti e le tue preferenze saranno disponibili",
+        "description": "Sia che tu stia utilizzando Alquran Tsirwah sul tuo telefono o sul tuo laptop, i tuoi segnalibri, gli ultimi versetti letti e le tue preferenze saranno disponibili",
         "title": "I tuoi dati verranno sincronizzati <br></br> su tutti i dispositivi"
       },
       "feedback": {
         "action": "Ok, capito",
-        "description": "Grazie per aver utilizzato Tsirwah Quran e saremo lieti di ricevere il tuo feedback su <link> feedback.Tsirwah Quran </link>",
+        "description": "Grazie per aver utilizzato Alquran Tsirwah e saremo lieti di ricevere il tuo feedback su <link> feedback.Alquran Tsirwah </link>",
         "title": "Vogliamo ascoltare i tuoi pensieri"
       },
       "quran-foundation-link": {
         "action": "Prossimo",
-        "description": "Usa il tuo login Tsirwah Quran per accedere a QuranReflect.com, una fiorente comunità globale impegnata nella riflessione coranica.",
+        "description": "Usa il tuo login Alquran Tsirwah per accedere a QuranReflect.com, una fiorente comunità globale impegnata nella riflessione coranica.",
         "title": "Usa il tuo account su tutte le app Quran.Foundation!"
       },
       "quran-growth-journey": {
@@ -26,7 +26,7 @@
       },
       "welcome": {
         "action": "Guarda cosa c'è di nuovo",
-        "title": "Benvenuto su Tsirwah Quran <br></br> Account utente"
+        "title": "Benvenuto su Alquran Tsirwah <br></br> Account utente"
       }
     },
     "collections-announcement": {
@@ -111,7 +111,7 @@
   "community": {
     "cta": "Unisciti alla comunità",
     "header": "Unisciti alla comunità QDC di costruttori e tecnologi musulmani.",
-    "sub-header": "Iscriviti al Tsirwah Quran Discord per partecipare e collaborare con la principale tecnologia islamica per la costruzione di comunità.",
+    "sub-header": "Iscriviti al Alquran Tsirwah Discord per partecipare e collaborare con la principale tecnologia islamica per la costruzione di comunità.",
     "title": "Comunità"
   },
   "complete-sign-up": "Completa la tua registrazione",
@@ -169,7 +169,7 @@
     "text_uthmani": "Uthmani"
   },
   "footer": {
-    "description": "Tsirwah Quran è un Sadaqah Jariyah. Speriamo di rendere facile per tutti la lettura, lo studio e l'apprendimento del Nobile Corano. Il Nobile Corano ha molti nomi tra cui Al-Quran Al-Kareem, Al-Ketab, Al-Furqan, Al-Maw'itha, Al-Thikr e Al-Noor.",
+    "description": "Alquran Tsirwah è un Sadaqah Jariyah. Speriamo di rendere facile per tutti la lettura, lo studio e l'apprendimento del Nobile Corano. Il Nobile Corano ha molti nomi tra cui Al-Quran Al-Kareem, Al-Ketab, Al-Furqan, Al-Maw'itha, Al-Thikr e Al-Noor.",
     "hiring": "Stiamo assumendo! Unisciti al team della QuranFoundation e contribuisci alla nostra missione. <link> Candidati ora! </link>",
     "rights": "Tutti i diritti riservati",
     "title": "Leggi, studia e impara Il Nobile Corano."
@@ -188,7 +188,7 @@
     "title": "Regala nei giorni migliori!"
   },
   "fundraising": {
-    "description": "Le donazioni mensili ci aiutano a migliorare Tsirwah Quran e a sostenere le operazioni, quindi ci concentriamo meno sulla raccolta fondi e più sulla creazione di impatto.",
+    "description": "Le donazioni mensili ci aiutano a migliorare Alquran Tsirwah e a sostenere le operazioni, quindi ci concentriamo meno sulla raccolta fondi e più sulla creazione di impatto.",
     "title": "Diventa un donatore mensile"
   },
   "help": "Aiuto",

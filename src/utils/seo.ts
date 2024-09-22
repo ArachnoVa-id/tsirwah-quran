@@ -7,7 +7,7 @@ import { getDefaultOgImageUrl } from '@/lib/og';
 import { VersesResponse } from 'types/ApiResponses';
 
 export const config = {
-  siteName: 'Tsirwah Quran',
+  siteName: 'Alquran Tsirwah',
   twitterHandle: '@app_quran',
   twitterCardType: 'summary_large_image',
   facebookApp: '342185219529773',
@@ -45,7 +45,7 @@ export function createSEOConfig({
   return {
     title: seoTitle,
     description,
-    titleTemplate: '%s - Tsirwah Quran',
+    titleTemplate: '%s - Alquran Tsirwah',
     defaultTitle: config.siteName,
     dangerouslySetAllPagesToNoFollow: !isProduction, // @see https://github.com/garmeeh/next-seo#dangerouslySetAllPagesToNoFollow
     dangerouslySetAllPagesToNoIndex: !isProduction, // @see https://github.com/garmeeh/next-seo#dangerouslySetAllPagesToNoIndex

@@ -32,7 +32,7 @@ const TitleAndDescription = () => {
         {/* <div className={styles.themeContainer}>
           <FooterThemeSwitcher />
         </div> */}
-        {/* <div className={styles.title}>Alquran yang Mulia - Tsirwah Quran</div> */}
+        {/* <div className={styles.title}>Alquran yang Mulia - Alquran Tsirwah</div> */}
       </div>
       {/* <p className={styles.description}>
         Sesungguhnya Allah mengangkat derajat seseorang dengan kitab ini (Alquran) dan merendahkan

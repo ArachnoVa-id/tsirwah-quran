@@ -68,7 +68,7 @@ const VolumeControl = () => {
           <Button
             tooltip={t('audio.player.volume-control')}
             shape={ButtonShape.Circle}
-            variant={ButtonVariant.Ghost}
+            variant={ButtonVariant.White}
           >
             {VOLUME_ICONS[icon]}
           </Button>

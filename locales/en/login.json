@@ -16,7 +16,7 @@
     "AuthenticationError": "Authentication failed. Please try again later",
     "TokenExpiredError": "You have been logged out, please login again."
   },
-  "login-title": "Login to Tsirwah Quran",
+  "login-title": "Login to Alquran Tsirwah",
   "other-options": "Other Login Options",
   "privacy-policy": "Protecting your privacy is our priority – By signing up, you consent to our <link>Privacy Policy</link>",
   "verify-code": "Verify that the provided security code matches the following text:"
