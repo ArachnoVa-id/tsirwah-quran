@@ -93,13 +93,13 @@ const TafsirBody = ({
 
   const [selectedChapterId, setSelectedChapterId] = useState(initialChapterId);
   const [selectedVerseNumber, setSelectedVerseNumber] = useState(initialVerseNumber);
-  const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState('indonesian');
   const selectedVerseKey = makeVerseKey(Number(selectedChapterId), Number(selectedVerseNumber));
   const [selectedTafsirIdOrSlug, setSelectedTafsirIdOrSlug] = useState<number | string>(
     initialTafsirIdOrSlug || userPreferredTafsirIds?.[0],
   );
   const [tafsirData, setTafsirData] = useState(null);
-  const [tafsirText, setTafsirText] = useState('');
+  // const [tafsirText, setTafsirText] = useState('');
 
   // if user opened tafsirBody via a url, we will have initialTafsirIdOrSlug
   // we need to set this `initialTafsirIdOrSlug` as a selectedTafsirIdOrSlug
@@ -214,6 +214,7 @@ const TafsirBody = ({
   };
 
   const fetchTafsirContent = useCallback(async () => {
+    if (!shouldRender) return;
     const resolvedUrl = await makeTafsirContentUrl('ar-tafsir-al-wasit', selectedVerseKey, {
       lang,
       quranFont: quranReaderStyles.quranFont,
@@ -230,7 +231,7 @@ const TafsirBody = ({
       const { verses } = camelizeKeys(apiData.tafsir);
       setTafsirData(verses);
     }
-  }, [lang, selectedVerseKey, quranReaderStyles]);
+  }, [lang, selectedVerseKey, quranReaderStyles, shouldRender]);
 
   // Using useEffect to fetch the data on component mount or update
   useEffect(() => {
@@ -257,7 +258,7 @@ const TafsirBody = ({
   let teksTafsir = '';
 
   const copyTafsirText = async () => {
-    if (!tafsirText || !tafsirData) return;
+    if (!tafsirData) return;
 
     const ayahText = wrapTextUthmani(tafsirData);
     const origin = getWindowOrigin('id');
@@ -271,8 +272,6 @@ const TafsirBody = ({
     );
     copyText(Promise.resolve(textBlob));
   };
-
-  useEffect(() => {}, [tafsirText]);
 
   // Assuming `tafsirData` is stored in the component state
 
@@ -305,18 +304,18 @@ const TafsirBody = ({
         // eslint-disable-next-line prefer-destructuring
         text = data.tafsir.text;
 
-        setTafsirText(text);
+        // setTafsirText(text);
         // eslint-disable-next-line prefer-destructuring
         languageId = data.tafsir.languageId;
       } else if (data?.data) {
         if (selectedTafsirIdOrSlug === 'id-tafsir-tahlili') {
           text = data.data.tafsir.tahlili.replace(/\n/g, '<br></br>');
 
-          setTafsirText(text);
+          // setTafsirText(text);
         } else if (selectedTafsirIdOrSlug === 'id-tafsir-ringkas-kemenag') {
           text = data.data.tafsir.wajiz.replace(/\n/g, '<br></br>');
 
-          setTafsirText(text);
+          // setTafsirText(text);
         }
         languageId = 67;
       }
@@ -407,7 +406,7 @@ const TafsirBody = ({
       selectedTafsirIdOrSlug,
       t,
       tafsirData,
-      tafsirsState,
+      // tafsirsState,
     ],
   );
 
@@ -459,18 +458,20 @@ const TafsirBody = ({
 
   useEffect(() => {
     const fetchUrl = async () => {
+      if (!shouldRender) return;
       const resolvedUrl = await makeTafsirContentUrl(selectedTafsirIdOrSlug, selectedVerseKey, {
         lang,
         quranFont: quranReaderStyles.quranFont,
         mushafLines: quranReaderStyles.mushafLines,
       });
       setUrl(resolvedUrl);
+      // console.log(selectedTafsirIdOrSlug, selectedVerseKey, lang, quranReaderStyles);
     };
 
     fetchUrl();
-  }, [selectedTafsirIdOrSlug, selectedVerseKey, lang, quranReaderStyles]);
+  }, [selectedTafsirIdOrSlug, selectedVerseKey, lang, quranReaderStyles, shouldRender]);
 
-  if (!url) return <TafsirSkeleton />; // Show loading state until the URL is resolved
+  // if (!url) return <TafsirSkeleton />; // Show loading state until the URL is resolved
 
   const body = (
     <div

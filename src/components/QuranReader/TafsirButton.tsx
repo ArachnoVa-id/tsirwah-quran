@@ -85,6 +85,7 @@ const TafsirButton: React.FC<Props> = ({
         shouldRender={isContentModalOpen}
         initialChapterId={chapterId.toString()}
         initialVerseNumber={verseNumber.toString()}
+        initialTafsirIdOrSlug="id-tafsir-ringkas-kemenag"
         scrollToTop={() => {
           contentModalRef.current.scrollToTop();
         }}
